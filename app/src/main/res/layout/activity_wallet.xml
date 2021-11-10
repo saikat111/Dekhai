@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9F9"
+    android:gravity="center"
+    tools:context=".screen.Wallet">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="5dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#fff"
+
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/abril_fatface"
+                    android:gravity="center"
+                    android:text="YOUR BALANCE"
+                    android:textColor="#000"
+                    android:textStyle="italic">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="20dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/abril_fatface"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textColor="#000"
+                    android:textStyle="italic"/>
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/abril_fatface"
+                    android:gravity="center"
+                    android:text=" TK"
+                    android:textColor="#000"
+                    android:textStyle="italic">
+
+                </TextView>
+            </LinearLayout>
+
+          <!--  <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:textSize="22dp"
+                android:text="" />-->
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Bkash"
+                    android:checked="false"
+                    android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="   Nogod"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:fontFamily="@font/alike"
+                android:textColor="#000"
+                android:text="Enter your Bkash/Nogod number"
+                >
+            </TextView>
+            <EditText
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@font/alike"
+                android:textColorHint="#4ABDFF"
+                android:textColor="#000"
+                android:hint="Number"
+                >
+
+            </EditText>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wthdraw"
+                android:id="@+id/withdraw"
+                android:onClick="withdraw"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:fontFamily="@font/alike"
+                android:textColor="#000"
+                android:text="**Minimum payout is 500tk "
+                >
+            </TextView>
+            <TextView
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:fontFamily="@font/alike"
+                android:textColor="#000"
+                android:text="**You will receive your payment with in 24 hours"
+                >
+            </TextView>
+
+
+        </LinearLayout>
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

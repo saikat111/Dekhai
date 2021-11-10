@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "502108630646",
+    "project_id": "dekhai-82505",
+    "storage_bucket": "dekhai-82505.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502108630646:android:c8b90b5935b8d00107b957",
+        "android_client_info": {
+          "package_name": "com.earning.dekhai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502108630646-e4ru9596l50jg9js9jnb81mu1kl4q3f9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7GxnZZaHbUFda7gP4ATCNNBnG8kg0z6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502108630646-e4ru9596l50jg9js9jnb81mu1kl4q3f9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#FFF"
+    android:padding="10dp"
+
+    >
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/logo"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alike"
+        android:gravity="center"
+        android:text="Enter your phone number "
+        android:textColor="#24282B"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/alike"
+
+        android:text="We will send you a OTP message"
+        android:textColor="#24282B"
+        android:textSize="17dp" />
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/spinnerCountries"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content" >
+
+    </Spinner>
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/editTextPhone"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_width="250dp"
+        android:textColorHint="#4ABDFF"
+        android:fontFamily="@font/alike"
+        android:hint="Number"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_width="177dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/alike"
+        android:textColor="#FFFFFF"
+        android:text="SEND OTP"
+
+
+
+        />
+
+</LinearLayout>
