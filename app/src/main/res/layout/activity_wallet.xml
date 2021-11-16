@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F9F9F9"
-    android:gravity="center"
-    tools:context=".screen.Wallet">
+    android:gravity="center">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,6 +55,7 @@
                 android:gravity="center"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/tk"
                     android:textSize="20dp"
 
                     android:layout_width="wrap_content"
@@ -95,14 +95,14 @@
                 android:id="@+id/radioGroup">
 
                 <RadioButton
-                    android:id="@+id/radioMale"
+                    android:id="@+id/bkash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="  Bkash"
                     android:checked="false"
                     android:textSize="20dp" />
                 <RadioButton
-                    android:id="@+id/radioFemale"
+                    android:id="@+id/nogod"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="   Nogod"
@@ -120,25 +120,26 @@
                 android:text="Enter your Bkash/Nogod number"
                 >
             </TextView>
+
             <EditText
-                android:layout_marginTop="15dp"
+                android:id="@+id/number"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/alike"
-                android:textColorHint="#4ABDFF"
-                android:textColor="#000"
                 android:hint="Number"
-                >
+                android:textColor="#000"
+                android:textColorHint="#4ABDFF">
 
             </EditText>
 
             <Button
+                android:id="@+id/withdraw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wthdraw"
-                android:id="@+id/withdraw"
-                android:onClick="withdraw"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:text="Withdraw" />
+
             <TextView
                 android:textSize="15dp"
                 android:layout_marginTop="15dp"
@@ -146,7 +147,7 @@
                 android:layout_height="25dp"
                 android:fontFamily="@font/alike"
                 android:textColor="#000"
-                android:text="**Minimum payout is 500tk "
+                android:text="**Minimum payout is 1000tk "
                 >
             </TextView>
             <TextView

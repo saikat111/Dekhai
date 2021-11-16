@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.earning.dekhai.MainActivity;
@@ -25,25 +24,26 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Wallet extends AppCompatActivity {
+public class PaymentActivity extends AppCompatActivity {
     String userId;
+    String title;
     private Button submit;
     private ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
     private DocumentReference currentUserDb;
-    private EditText number;
+    private EditText  number, td;
     RadioGroup radioGroup;
-    TextView tk;
+    String type;
     RadioButton typerradioButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wallet);
-        submit = findViewById(R.id.withdraw);
+        setContentView(R.layout.activity_payment);
+        title = getIntent().getExtras().getString("title");
+        submit = findViewById(R.id.submit);
         number = findViewById(R.id.number);
-        tk = findViewById(R.id.tk);
+        td = findViewById(R.id.transactionid);
         radioGroup = findViewById(R.id.radioGroup);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("saving your info....");
@@ -58,25 +58,20 @@ public class Wallet extends AppCompatActivity {
                     progressDialog.dismiss();
                     return;
                 }
-                String t = tk.getText().toString();
-
-                if(Integer.parseInt(t) < 999){
-                    progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Not enough balance", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 /*else{
                     Toast.makeText(getApplicationContext(),typerradioButton.getText(), Toast.LENGTH_SHORT).show();
                 }*/
                 mAuth = FirebaseAuth.getInstance();
                 userId = mAuth.getCurrentUser().getUid();
-                currentUserDb = FirebaseFirestore.getInstance().collection("withdraw_request").document(userId);
+                currentUserDb = FirebaseFirestore.getInstance().collection("membershiprequest").document(userId);
                 String n = number.getText().toString();
+                String t = td.getText().toString();
 
                 Map userInfo = new HashMap();
                 userInfo.put("number",n );
+                userInfo.put("type",title );
+                userInfo.put("transactionid",t);
                 userInfo.put("userid",userId);
-                userInfo.put("tk",t);
                 userInfo.put("payment",typerradioButton.getText());
                 currentUserDb.set(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -93,6 +88,7 @@ public class Wallet extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
+
 
 
             }

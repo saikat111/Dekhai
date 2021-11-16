@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
 import com.earning.dekhai.authentication.PhoneNumber;
-import com.earning.dekhai.screen.Profile;
+import com.earning.dekhai.screen.MembarShipActivity;
+import com.earning.dekhai.screen.NoticeActivity;
 import com.earning.dekhai.screen.ProfileData;
 import com.earning.dekhai.screen.SplashScreen;
 import com.earning.dekhai.screen.Wallet;
@@ -54,11 +54,12 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .build();
         final PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Profile");
-        final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("Wallet");
-        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(2).withName("Payment History");
-        final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(2).withName("Youtube");
-        final PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(2).withName("Support Group");
-        final PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(2).withName("Logout");
+        final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Membership");
+        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(2).withName("Wallet");
+        final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(2).withName("Payment History");
+        final PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(2).withName("Youtube");
+        final PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(2).withName("Support Group");
+        final PrimaryDrawerItem item7 = new PrimaryDrawerItem().withIdentifier(2).withName("Logout");
 //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -70,27 +71,30 @@ public class MainActivity extends AppCompatActivity {
                         item3,
                         item4,
                         item5,
-                        item6
+                        item6,
+                        item7
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         if (drawerItem == item1) {
 
-                                Intent homeIntent=new Intent(MainActivity.this, Profile.class);
+                                Intent homeIntent=new Intent(MainActivity.this, ProfileData.class);
                                 startActivity(homeIntent);
 
                             /*Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.fb)));
                             startActivity(browserIntent);*/
                         }
                         if (drawerItem == item2) {
+                            Intent homeIntent=new Intent(getApplicationContext(), MembarShipActivity.class);
+                            startActivity(homeIntent);
+                        }
+                        if (drawerItem == item3) {
                             Intent homeIntent=new Intent(MainActivity.this, Wallet.class);
                             startActivity(homeIntent);
 
                         /*    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.youtube)));
                             startActivity(browserIntent);*/
-                        }
-                        if (drawerItem == item3) {
 
                         }
                         if (drawerItem == item4) {
@@ -102,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(browserIntent);*/
                         }
                         if (drawerItem == item6) {
+
+                        }
+                        if (drawerItem == item7){
                             try {
                                 mAuth.signOut();
                                 Intent intent = new Intent(getApplicationContext(), SplashScreen.class);
@@ -118,6 +125,24 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         //MaterialDrawer
+
+    }
+
+    public void profile(View view) {
+        Intent homeIntent=new Intent(MainActivity.this, ProfileData.class);
+        startActivity(homeIntent);
+
+    }
+
+    public void wallet(View view) {
+        Intent homeIntent=new Intent(MainActivity.this, Wallet.class);
+        startActivity(homeIntent);
+
+    }
+
+    public void notice(View view) {
+        Intent homeIntent=new Intent(MainActivity.this, NoticeActivity.class);
+        startActivity(homeIntent);
 
     }
 }

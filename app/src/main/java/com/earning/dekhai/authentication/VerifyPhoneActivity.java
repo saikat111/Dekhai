@@ -3,7 +3,6 @@ package com.earning.dekhai.authentication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,10 +12,9 @@ import android.widget.Toast;
 
 import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
-import com.earning.dekhai.screen.Profile;
+import com.earning.dekhai.screen.ProfileData;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -83,7 +81,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                                Intent intent = new Intent(VerifyPhoneActivity.this, Profile.class);
+                                Intent intent = new Intent(VerifyPhoneActivity.this, ProfileData.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 finish();

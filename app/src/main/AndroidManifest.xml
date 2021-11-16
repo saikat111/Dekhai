@@ -13,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
-            android:name=".screen.Profile"
+            android:name=".screen.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.MembarShipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.NoticeActivity"
             android:exported="false" />
         <activity
             android:name=".screen.ProfileData"
