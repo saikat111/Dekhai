@@ -1,19 +1,38 @@
 package com.earning.dekhai;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.earning.dekhai.authentication.PhoneNumber;
+import com.earning.dekhai.screen.FreeTaskActivity;
 import com.earning.dekhai.screen.MembarShipActivity;
 import com.earning.dekhai.screen.NoticeActivity;
 import com.earning.dekhai.screen.ProfileData;
 import com.earning.dekhai.screen.SplashScreen;
 import com.earning.dekhai.screen.Wallet;
+import com.facebook.ads.AudienceNetworkAds;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -23,19 +42,51 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private FirebaseAuth mAuth;
+    private CardView freetask, premiumtask;
+    String userId;
+    private DocumentReference currentUserDb;
+    private CollectionReference currentUserDb3;
+    private TextView date,fulldate, balance,taskDone;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        freetask = findViewById(R.id.freetask);
+        premiumtask = findViewById(R.id.premiumtask);
+        date = findViewById(R.id.date);
+        balance = findViewById(R.id.balance);
+        taskDone = findViewById(R.id.taskdone);
+        fulldate = findViewById(R.id.fulldate);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        AudienceNetworkAds.initialize(this);
+/*        Date date = new Date();
+        int today = Integer.parseInt(DateFormat.format("dd",   date).toString());
+        Log.d("Calendar", String.valueOf(today));*/
+
+
 
         mAuth = FirebaseAuth.getInstance();
+        userId = mAuth.getCurrentUser().getUid();
+        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+        getDate();
+        incomeCheck();
+
 
 
 //MaterialDrawer
@@ -126,13 +177,247 @@ public class MainActivity extends AppCompatActivity {
 
         //MaterialDrawer
 
+
+        freetask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Integer.parseInt(taskDone.getText().toString()) >=100){
+                    Toast.makeText(getApplicationContext(),"No task available", Toast.LENGTH_LONG).show();
+
+                    return;
+                }
+                currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if(error !=null){
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        if (value.exists()) {
+                            Map<String, Object> map = (Map<String, Object>) value.getData();
+                            if (map.get("membershipname") != null) {
+                                String aboutForDisplay = map.get("membershipname").toString();
+                               Toast.makeText(getApplicationContext(), "You are in " + aboutForDisplay , Toast.LENGTH_SHORT).show();
+                               return;
+                            }
+                            else{
+                                Intent homeIntent=new Intent(getApplicationContext(), FreeTaskActivity.class);
+                                homeIntent.putExtra("taskDone", taskDone.getText().toString());
+                                homeIntent.putExtra("date", date.getText().toString());
+                                startActivity(homeIntent);
+                            }
+
+                        }
+                    }
+                });
+
+            }
+        });
+
+        premiumtask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Integer.parseInt(taskDone.getText().toString()) >=100){
+                    Toast.makeText(getApplicationContext(),"No task available", Toast.LENGTH_LONG).show();
+
+                    return;
+                }
+                currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if(error !=null){
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        if (value.exists()) {
+                            Map<String, Object> map = (Map<String, Object>) value.getData();
+                            if (map.get("membershipname") != null) {
+                                String aboutForDisplay = map.get("membershipname").toString();
+                                Intent homeIntent=new Intent(getApplicationContext(), FreeTaskActivity.class);
+                                homeIntent.putExtra("membershipname", aboutForDisplay);
+                                startActivity(homeIntent);
+
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "You are in free membership" , Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    }
+                });
+            }
+        });
+
+
+    }
+    public void getDate(){
+        currentUserDb = FirebaseFirestore.getInstance().collection("ads").document("todayesdate");
+        currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error !=null){
+                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (value.exists()) {
+                    Map<String, Object> map = (Map<String, Object>) value.getData();
+                    if (map.get("date") != null) {
+                        String aboutForDisplay = map.get("date").toString();
+                        date.setText(aboutForDisplay);
+                        saveTodaysDate(aboutForDisplay);
+                        creatAdsNode(aboutForDisplay);
+                    }
+                    if (map.get("fulldate") != null) {
+                        String aboutForDisplay = map.get("fulldate").toString();
+                        fulldate.setText(aboutForDisplay);
+                    }
+
+
+                }
+            }
+        });
     }
 
-    public void profile(View view) {
-        Intent homeIntent=new Intent(MainActivity.this, ProfileData.class);
-        startActivity(homeIntent);
+    public void saveTodaysDate(String datefronadmin){
+        mAuth = FirebaseAuth.getInstance();
+        userId = mAuth.getCurrentUser().getUid();
+        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+
+        Map userInfo = new HashMap();
+        userInfo.put("todaydate",datefronadmin );
+        currentUserDb.update(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
+               /* Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();*/
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+                Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
     }
+    public void incomeCheck(){
+        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+        currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error !=null){
+                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (value.exists()) {
+                    Map<String, Object> map = (Map<String, Object>) value.getData();
+                    if (map.get("income") != null) {
+                        String aboutForDisplay = map.get("income").toString();
+                        balance.setText(aboutForDisplay);
+
+                    }
+                    else {
+                        mAuth = FirebaseAuth.getInstance();
+                        userId = mAuth.getCurrentUser().getUid();
+                        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+
+                        Map userInfo = new HashMap();
+                        userInfo.put("income","0.00" );
+                        currentUserDb.update(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+
+               /* Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();*/
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                Intent homeIntent=new Intent(getApplicationContext(), Wallet.class);
+                                startActivity(homeIntent);
+                                finish();
+                            }
+                        });
+
+                    }
+
+
+                }
+            }
+        });
+    }
+    public void creatAdsNode(String datev){
+        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+        currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error !=null){
+                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (value.exists()) {
+                    Map<String, Object> map = (Map<String, Object>) value.getData();
+                    if (map.get(datev) != null) {
+                        String aboutForDisplay = map.get(datev).toString();
+                        taskDone.setText(aboutForDisplay);
+                      /*  balance.setText(aboutForDisplay);*/
+                        /*currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+                        int a = Integer.parseInt(datev);
+                        int b = a -1;
+                        // Remove the 'capital' field from the document
+                        Map<String,Object> updates = new HashMap<>();
+                        updates.put(String.valueOf(b), FieldValue.delete());
+
+                        currentUserDb.update(updates);*/
+
+
+
+                    }
+                    else {
+                        mAuth = FirebaseAuth.getInstance();
+                        userId = mAuth.getCurrentUser().getUid();
+                        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+
+                        Map userInfo = new HashMap();
+                        userInfo.put(datev,"0" );
+                        currentUserDb.update(userInfo);/*.addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+                                int a = Integer.parseInt(datev);
+                                int b = a -1;
+                                // Remove the 'capital' field from the document
+                                Map<String,Object> updates = new HashMap<>();
+                                updates.put(String.valueOf(b), FieldValue.delete());
+
+                                currentUserDb.update(updates);
+
+
+
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+
+                            }
+                        });*/
+
+                    }
+
+
+                }
+            }
+        });
+    }
+
 
     public void wallet(View view) {
         Intent homeIntent=new Intent(MainActivity.this, Wallet.class);
@@ -144,5 +429,11 @@ public class MainActivity extends AppCompatActivity {
         Intent homeIntent=new Intent(MainActivity.this, NoticeActivity.class);
         startActivity(homeIntent);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

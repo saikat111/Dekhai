@@ -147,7 +147,7 @@
                 android:layout_height="25dp"
                 android:fontFamily="@font/alike"
                 android:textColor="#000"
-                android:text="**Minimum payout is 1000tk "
+                android:text="**Minimum payout is 500tk "
                 >
             </TextView>
             <TextView

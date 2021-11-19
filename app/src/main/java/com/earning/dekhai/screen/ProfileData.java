@@ -62,7 +62,7 @@ public class ProfileData extends AppCompatActivity {
                 userInfo.put("number",num );
                 userInfo.put("city",c );
                 userInfo.put("userid",userId);
-                currentUserDb.set(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                currentUserDb.update(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         progressDialog.dismiss();

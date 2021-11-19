@@ -58,5 +58,7 @@ dependencies {
 
     implementation "com.mikepenz:materialdrawer:6.1.2"
 
+    implementation 'com.facebook.android:audience-network-sdk:6.+'
+
 
 }

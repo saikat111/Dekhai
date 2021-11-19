@@ -3,4 +3,8 @@
     <string name="fb">https://www.facebook.com/groups/1166929073679754</string>
     <string name="youtube">https://www.youtube.com/channel/UC7sS1rBaAMypmr6nBCixIAQ?view_as=subscriber</string>
     <string name="email">shulovshopbd@gmail.com</string>
+
+    <string name="fb_insterstial_ads">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+
+
 </resources>

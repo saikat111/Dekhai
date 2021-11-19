@@ -36,6 +36,71 @@
                 android:layout_height="200dp"
                 android:background="@drawable/logo">
             </ImageView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="#fff"
+                android:padding="15dp">
+                <LinearLayout
+
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                <LinearLayout
+
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : "></TextView>
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                       ></TextView>
+                    <TextView
+                        android:id="@+id/fulldate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></TextView>
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balance : "></TextView>
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></TextView>
+                </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Todays task done"
+                        ></TextView>
+                    <TextView
+                        android:id="@+id/taskdone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
             <GridLayout
                 android:layout_marginTop="10dp"
                 android:padding="5dp"
@@ -62,7 +127,7 @@
                         android:onClick="notice"
                         >
                         <LinearLayout
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -82,7 +147,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Notice"
-                                android:textSize="25sp">
+                                android:textSize="20sp">
 
                             </TextView>
                         </LinearLayout>
@@ -96,6 +161,7 @@
                     android:layout_columnWeight="1"
                     android:orientation="vertical">
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/freetask"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
@@ -103,10 +169,10 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"
                         app:cardElevation="10dp"
-                        android:onClick="profile"
+
                         >
                         <LinearLayout
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:gravity="center"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -123,8 +189,8 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Profile"
-                                android:textSize="25sp">
+                                android:text="Free Task"
+                                android:textSize="20sp">
 
                             </TextView>
                         </LinearLayout>
@@ -145,6 +211,7 @@
                     android:layout_columnWeight="1"
                     android:orientation="vertical">
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/premiumtask"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
@@ -154,7 +221,7 @@
                         app:cardElevation="10dp"
                         >
                         <LinearLayout
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -171,8 +238,8 @@
                                 android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Task"
-                                android:textSize="25sp">
+                                android:text="Premium Task"
+                                android:textSize="20sp">
 
                             </TextView>
                         </LinearLayout>
@@ -196,7 +263,7 @@
                         android:onClick="wallet"
                         >
                         <LinearLayout
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:gravity="center"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -215,7 +282,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Wallet"
-                                android:textSize="25sp">
+                                android:textSize="20sp">
 
                             </TextView>
                         </LinearLayout>

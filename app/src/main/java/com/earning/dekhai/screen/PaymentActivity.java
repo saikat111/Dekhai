@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
+import com.earning.dekhai.authentication.PhoneNumber;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -93,5 +94,13 @@ public class PaymentActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent homeIntent=new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(homeIntent);
+        finish();
     }
 }

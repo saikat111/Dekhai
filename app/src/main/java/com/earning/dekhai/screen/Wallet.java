@@ -1,6 +1,7 @@
 package com.earning.dekhai.screen;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -20,7 +21,10 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,6 +51,7 @@ public class Wallet extends AppCompatActivity {
         radioGroup = findViewById(R.id.radioGroup);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("saving your info....");
+        getIncome();
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +65,7 @@ public class Wallet extends AppCompatActivity {
                 }
                 String t = tk.getText().toString();
 
-                if(Integer.parseInt(t) < 999){
+                if(Integer.parseInt(t) < 499){
                     progressDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Not enough balance", Toast.LENGTH_SHORT).show();
                     return;
@@ -81,10 +86,26 @@ public class Wallet extends AppCompatActivity {
                 currentUserDb.set(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        progressDialog.dismiss();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
-                        finish();
+                        mAuth = FirebaseAuth.getInstance();
+                        userId = mAuth.getCurrentUser().getUid();
+                        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+                        Map userInfo = new HashMap();
+                        userInfo.put("income","0" );
+                        currentUserDb.update(userInfo).addOnSuccessListener(new OnSuccessListener() {
+                            @Override
+                            public void onSuccess(Object o) {
+                                progressDialog.dismiss();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                progressDialog.dismiss();
+                                Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -95,6 +116,27 @@ public class Wallet extends AppCompatActivity {
                 });
 
 
+            }
+        });
+    }
+    public void getIncome(){
+        mAuth = FirebaseAuth.getInstance();
+        userId = mAuth.getCurrentUser().getUid();
+        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+        currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error !=null){
+                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (value.exists()) {
+                    Map<String, Object> map = (Map<String, Object>) value.getData();
+                    if (map.get("income") != null) {
+                        String aboutForDisplay = map.get("income").toString();
+                        tk.setText(aboutForDisplay);
+                    }
+                }
             }
         });
     }
