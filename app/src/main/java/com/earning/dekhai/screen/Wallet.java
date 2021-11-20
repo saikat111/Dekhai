@@ -37,7 +37,7 @@ public class Wallet extends AppCompatActivity {
     private DocumentReference currentUserDb;
     private EditText number;
     RadioGroup radioGroup;
-    TextView tk;
+    TextView tk, numberb;
     RadioButton typerradioButton;
 
 
@@ -47,11 +47,13 @@ public class Wallet extends AppCompatActivity {
         setContentView(R.layout.activity_wallet);
         submit = findViewById(R.id.withdraw);
         number = findViewById(R.id.number);
+        numberb = findViewById(R.id.numberb);
         tk = findViewById(R.id.tk);
         radioGroup = findViewById(R.id.radioGroup);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("saving your info....");
         getIncome();
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +67,7 @@ public class Wallet extends AppCompatActivity {
                 }
                 String t = tk.getText().toString();
 
-                if(Integer.parseInt(t) < 499){
+                if(Float.parseFloat(t) < 499.00){
                     progressDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Not enough balance", Toast.LENGTH_SHORT).show();
                     return;
@@ -140,4 +142,5 @@ public class Wallet extends AppCompatActivity {
             }
         });
     }
+
 }

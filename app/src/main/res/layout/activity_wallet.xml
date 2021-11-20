@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F9F9F9"
+    android:background="#FF6847"
     android:gravity="center">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             app:cardElevation="10dp"
             app:cardCornerRadius="5dp"
             android:layout_gravity="center"
-            app:cardBackgroundColor="#fff"
+            app:cardBackgroundColor="#D7654C"
 
             >
         <LinearLayout
@@ -129,7 +129,7 @@
                 android:fontFamily="@font/alike"
                 android:hint="Number"
                 android:textColor="#000"
-                android:textColorHint="#4ABDFF">
+                android:textColorHint="#000">
 
             </EditText>
 

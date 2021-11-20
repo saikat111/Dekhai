@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#FF6847"
+    android:background="#D3E53E"
     tools:context=".MainActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -23,7 +23,7 @@
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#D7654C">
+                android:background="#D3E733">
 
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/toolbar"
@@ -47,9 +47,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
                 android:padding="15dp"
-                app:cardBackgroundColor="#D7654C"
+                app:cardBackgroundColor="#D3E733"
                 app:cardCornerRadius="5dp"
-                app:cardElevation="10dp">
+                app:cardElevation="15dp">
 
                 <LinearLayout
 
@@ -159,9 +159,9 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
                         android:onClick="notice"
-                        app:cardBackgroundColor="#D7654C"
+                        app:cardBackgroundColor="#D3E733"
 
-                        app:cardElevation="10dp">
+                        app:cardElevation="15dp">
 
                         <LinearLayout
                             android:layout_width="150dp"
@@ -210,8 +210,8 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
-                        app:cardBackgroundColor="#D7654C"
-                        app:cardElevation="10dp"
+                        app:cardBackgroundColor="#D3E733"
+                        app:cardElevation="15dp"
 
 
                         >
@@ -269,9 +269,9 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
-                        app:cardBackgroundColor="#D7654C"
+                        app:cardBackgroundColor="#D3E733"
 
-                        app:cardElevation="10dp">
+                        app:cardElevation="15dp">
 
                         <LinearLayout
                             android:layout_width="150dp"
@@ -318,9 +318,9 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
                         android:onClick="wallet"
-                        app:cardBackgroundColor="#D7654C"
+                        app:cardBackgroundColor="#D3E733"
 
-                        app:cardElevation="10dp">
+                        app:cardElevation="15dp">
 
                         <LinearLayout
                             android:layout_width="150dp"

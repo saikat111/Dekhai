@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F9F9F9"
+    android:background="#D3E53E"
     android:gravity="center">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             app:cardElevation="10dp"
             app:cardCornerRadius="5dp"
             android:layout_gravity="center"
-            app:cardBackgroundColor="#fff"
+            app:cardBackgroundColor="#D3E733"
 
             >
             <LinearLayout
@@ -32,7 +32,27 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 >
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:fontFamily="@font/alike"
+                    android:textColor="#000"
+                    android:text="নিচের দেওয়া নম্বর এ  টাকা সেন্ট করতে হবে "
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/numberb"
+                    android:textSize="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:fontFamily="@font/alike"
+                    android:textColor="#000"
 
+                    >
+                </TextView>
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -57,10 +77,11 @@
                 </RadioGroup>
 
                 <TextView
-                    android:textSize="20dp"
+
                     android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:textSize="20dp"
                     android:fontFamily="@font/alike"
                     android:textColor="#000"
                     android:text="Enter your Bkash/Nogod number"

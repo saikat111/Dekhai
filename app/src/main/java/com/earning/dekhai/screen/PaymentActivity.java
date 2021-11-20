@@ -1,6 +1,7 @@
 package com.earning.dekhai.screen;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.earning.dekhai.MainActivity;
@@ -20,7 +22,10 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +41,7 @@ public class PaymentActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     String type;
     RadioButton typerradioButton;
+    TextView  numberb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +51,12 @@ public class PaymentActivity extends AppCompatActivity {
         submit = findViewById(R.id.submit);
         number = findViewById(R.id.number);
         td = findViewById(R.id.transactionid);
+        numberb = findViewById(R.id.numberb);
+
         radioGroup = findViewById(R.id.radioGroup);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("saving your info....");
+        getNumber();
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +101,27 @@ public class PaymentActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+    }
+    public void getNumber(){
+        mAuth = FirebaseAuth.getInstance();
+        userId = mAuth.getCurrentUser().getUid();
+        currentUserDb = FirebaseFirestore.getInstance().collection("ads").document("number");
+        currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error !=null){
+                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (value.exists()) {
+                    Map<String, Object> map = (Map<String, Object>) value.getData();
+                    if (map.get("bkash") != null) {
+                        String aboutForDisplay = map.get("bkash").toString();
+                        numberb.setText(aboutForDisplay);
+                    }
+                }
             }
         });
     }
