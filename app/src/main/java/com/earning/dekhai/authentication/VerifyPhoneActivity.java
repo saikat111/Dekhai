@@ -1,6 +1,7 @@
 package com.earning.dekhai.authentication;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,13 +15,22 @@ import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.earning.dekhai.screen.ProfileData;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -32,6 +42,8 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     private EditText editText;
     private String phonenumber;
     private String id ,category;
+    private DocumentReference currentUserDb;
+    String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,10 +93,58 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                                Intent intent = new Intent(VerifyPhoneActivity.this, ProfileData.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                startActivity(intent);
-                                finish();
+                            mAuth = FirebaseAuth.getInstance();
+                            userId = mAuth.getCurrentUser().getUid();
+                            currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+                            currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                                @Override
+                                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                    if(error !=null){
+                                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                                        return;
+                                    }
+                                    if (value.exists()) {
+
+                                        Intent intent = new Intent(VerifyPhoneActivity.this, ProfileData.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                    else{
+                                        mAuth = FirebaseAuth.getInstance();
+                                        userId = mAuth.getCurrentUser().getUid();
+                                        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+
+
+                                        Map userInfo = new HashMap();
+                                        userInfo.put("name","" );
+                                        userInfo.put("number","" );
+                                        userInfo.put("city","" );
+                                        userInfo.put("userid","");
+                                        currentUserDb.set(userInfo).addOnSuccessListener(new OnSuccessListener() {
+                                            @Override
+                                            public void onSuccess(Object o) {
+                                                Intent intent = new Intent(VerifyPhoneActivity.this, ProfileData.class);
+                                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                startActivity(intent);
+                                                finish();
+                                                return;
+                                            }
+                                        }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+
+                                            }
+                                        });
+
+
+                                    }
+
+                                }
+                            });
+
+
                         }
                         else {
                             Toast.makeText(VerifyPhoneActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
