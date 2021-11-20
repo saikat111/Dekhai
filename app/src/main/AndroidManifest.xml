@@ -7,12 +7,15 @@
     <application
         android:name=".notification.MainApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="true"
         android:theme="@style/Theme.Dekhai">
+        <activity
+            android:name=".screen.GoldTaskActivity"
+            android:exported="false" />
         <activity
             android:name=".screen.PremiumTaskActivity"
             android:exported="false" />

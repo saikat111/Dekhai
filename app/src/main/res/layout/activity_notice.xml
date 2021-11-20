@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF6847"
     >
    <androidx.core.widget.NestedScrollView
        android:padding="8dp"
@@ -14,7 +15,16 @@
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:gravity="center"
           android:orientation="vertical">
+        <!-- <TextView
+             android:textSize="20dp"
+             android:textColor="#000"
+             android:fontFamily="@font/alike"
+             android:text="Notice Page "
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             ></TextView>-->
          <RelativeLayout
              android:layout_marginTop="10dp"
              android:layout_width="match_parent"
@@ -32,5 +42,13 @@
 
 
    </androidx.core.widget.NestedScrollView>
+   <LinearLayout
+       android:id="@+id/banner_container"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       />
 
 </RelativeLayout>

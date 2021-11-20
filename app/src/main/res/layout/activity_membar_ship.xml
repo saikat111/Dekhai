@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF6847"
     >
     <androidx.core.widget.NestedScrollView
         android:padding="8dp"
@@ -32,5 +33,12 @@
 
 
     </androidx.core.widget.NestedScrollView>
-
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </RelativeLayout>

@@ -32,7 +32,7 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PremiumTaskActivity extends AppCompatActivity {
+public class GoldTaskActivity extends AppCompatActivity {
     Button adsshow;
     private final String TAG = FreeTaskActivity.class.getSimpleName();
     private InterstitialAd interstitialAd;
@@ -86,7 +86,7 @@ public class PremiumTaskActivity extends AppCompatActivity {
                         currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
                         float incomeTk, nowIncome;
                         incomeTk = Float.parseFloat(balance.getText().toString());
-                        nowIncome = (float) (incomeTk + 0.50);
+                        nowIncome = (float) (incomeTk + 1.00);
                         float m;
                         m = Float.parseFloat(df.format(nowIncome));
                         int a ;

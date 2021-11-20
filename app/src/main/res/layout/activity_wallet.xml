@@ -157,7 +157,7 @@
                 android:layout_height="25dp"
                 android:fontFamily="@font/alike"
                 android:textColor="#000"
-                android:text="**You will receive your payment with in 24 hours"
+                android:text="**You will receive your payment with in 72 hours"
                 >
             </TextView>
 

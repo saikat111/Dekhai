@@ -6,21 +6,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.earning.dekhai.authentication.PhoneNumber;
 import com.earning.dekhai.screen.FreeTaskActivity;
+import com.earning.dekhai.screen.GoldTaskActivity;
 import com.earning.dekhai.screen.MembarShipActivity;
 import com.earning.dekhai.screen.NoticeActivity;
+import com.earning.dekhai.screen.PremiumTaskActivity;
 import com.earning.dekhai.screen.ProfileData;
 import com.earning.dekhai.screen.SplashScreen;
 import com.earning.dekhai.screen.Wallet;
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -56,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private DocumentReference currentUserDb;
     private CollectionReference currentUserDb3;
     private TextView date,fulldate, balance,taskDone;
-
+    private AdView adView;
 
 
 
@@ -87,7 +93,16 @@ public class MainActivity extends AppCompatActivity {
         getDate();
         incomeCheck();
 
+        adView = new AdView(this, getApplicationContext().getString(R.string.fb_banner_ads), AdSize.BANNER_HEIGHT_50);
 
+// Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+// Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+// Request an ad
+        adView.loadAd();
 
 //MaterialDrawer
 
@@ -233,9 +248,27 @@ public class MainActivity extends AppCompatActivity {
                             Map<String, Object> map = (Map<String, Object>) value.getData();
                             if (map.get("membershipname") != null) {
                                 String aboutForDisplay = map.get("membershipname").toString();
-                                Intent homeIntent=new Intent(getApplicationContext(), FreeTaskActivity.class);
+                                if(aboutForDisplay.equalsIgnoreCase("Silver Membership")){
+                                    Intent homeIntent=new Intent(getApplicationContext(), PremiumTaskActivity.class);
+                                    homeIntent.putExtra("taskDone", taskDone.getText().toString());
+                                    homeIntent.putExtra("date", date.getText().toString());
+                                    startActivity(homeIntent);
+                                }
+                                else if (aboutForDisplay.equalsIgnoreCase("Gold Membership")){
+                                    Intent homeIntent=new Intent(getApplicationContext(), GoldTaskActivity.class);
+                                    homeIntent.putExtra("taskDone", taskDone.getText().toString());
+                                    homeIntent.putExtra("date", date.getText().toString());
+                                    startActivity(homeIntent);
+                                }
+
+
+                                /*Intent homeIntent=new Intent(getApplicationContext(), FreeTaskActivity.class);
                                 homeIntent.putExtra("membershipname", aboutForDisplay);
-                                startActivity(homeIntent);
+                                homeIntent.putExtra("stk", ".50");
+                                homeIntent.putExtra("gtk", "1.00");
+                                homeIntent.putExtra("taskDone", taskDone.getText().toString());
+                                homeIntent.putExtra("date", date.getText().toString());
+                                startActivity(homeIntent);*/
 
                             }
                             else{
@@ -366,15 +399,19 @@ public class MainActivity extends AppCompatActivity {
                     if (map.get(datev) != null) {
                         String aboutForDisplay = map.get(datev).toString();
                         taskDone.setText(aboutForDisplay);
-                      /*  balance.setText(aboutForDisplay);*/
-                        /*currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
+                        currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
                         int a = Integer.parseInt(datev);
                         int b = a -1;
-                        // Remove the 'capital' field from the document
-                        Map<String,Object> updates = new HashMap<>();
-                        updates.put(String.valueOf(b), FieldValue.delete());
-
-                        currentUserDb.update(updates);*/
+                        Map userInfo = new HashMap();
+                        userInfo.put(String.valueOf(b),"0" );
+                        currentUserDb.update(userInfo).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Intent homeIntent=new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(homeIntent);
+                                finish();
+                            }
+                        });
 
 
 
@@ -386,18 +423,22 @@ public class MainActivity extends AppCompatActivity {
 
                         Map userInfo = new HashMap();
                         userInfo.put(datev,"0" );
-                        currentUserDb.update(userInfo);/*.addOnSuccessListener(new OnSuccessListener<Void>() {
+                        currentUserDb.update(userInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
                                 int a = Integer.parseInt(datev);
                                 int b = a -1;
-                                // Remove the 'capital' field from the document
-                                Map<String,Object> updates = new HashMap<>();
-                                updates.put(String.valueOf(b), FieldValue.delete());
-
-                                currentUserDb.update(updates);
-
+                                Map userInfo = new HashMap();
+                                userInfo.put(String.valueOf(b),"0" );
+                                currentUserDb.update(userInfo).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Intent homeIntent=new Intent(getApplicationContext(), MainActivity.class);
+                                        startActivity(homeIntent);
+                                        finish();
+                                    }
+                                });
 
 
 
@@ -408,7 +449,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                             }
-                        });*/
+                        });
 
                     }
 
@@ -435,5 +476,12 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 }

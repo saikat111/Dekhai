@@ -5,148 +5,188 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    android:background="#F9F9F9"
+
+    android:background="#FF6847"
     tools:context=".MainActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="5dp">
+
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFF">
+                android:background="#D7654C">
+
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:menu="@menu/top_bar"
-                    >
-                </com.google.android.material.appbar.MaterialToolbar>
+                    app:menu="@menu/top_bar"></com.google.android.material.appbar.MaterialToolbar>
             </com.google.android.material.appbar.AppBarLayout>
+
             <ImageView
-                android:layout_marginTop="15dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="@drawable/logo">
-            </ImageView>
+                android:layout_marginTop="15dp"
+                android:background="@drawable/logo"></ImageView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardElevation="10dp"
+                android:padding="15dp"
+                app:cardBackgroundColor="#D7654C"
                 app:cardCornerRadius="5dp"
-                app:cardBackgroundColor="#fff"
-                android:padding="15dp">
+                app:cardElevation="10dp">
+
                 <LinearLayout
 
-                    android:padding="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
-                <LinearLayout
+                    android:padding="15dp">
 
-                    android:padding="15dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date : "></TextView>
-                    <TextView
-                        android:id="@+id/date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"
-                       ></TextView>
-                    <TextView
-                        android:id="@+id/fulldate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        ></TextView>
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Balance : "></TextView>
+                    <LinearLayout
 
-                    <TextView
-                        android:id="@+id/balance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        ></TextView>
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alike"
+                            android:text="Date : "
+                            android:textColor="#000"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alike"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:visibility="gone"></TextView>
+
+                        <TextView
+                            android:id="@+id/fulldate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alike"
+                            android:textColor="#000"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/alike"
+                            android:text="Balance : "
+                            android:textColor="#000"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alike"
+                            android:textColor="#000"
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alike"
+                            android:text="Todays task done : "
+                            android:textColor="#000"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/taskdone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alike"
+                            android:textColor="#000"
+                            android:textSize="20dp"></TextView>
+                    </LinearLayout>
                 </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Todays task done"
-                        ></TextView>
-                    <TextView
-                        android:id="@+id/taskdone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        ></TextView>
-                </LinearLayout>
-
             </androidx.cardview.widget.CardView>
+
             <GridLayout
-                android:layout_marginTop="10dp"
-                android:padding="5dp"
                 android:id="@+id/GridLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:columnCount="2"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_columnWeight="1"
                     android:orientation="vertical">
+
                     <androidx.cardview.widget.CardView
 
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        app:cardElevation="10dp"
                         android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
                         android:onClick="notice"
-                        >
+                        app:cardBackgroundColor="#D7654C"
+
+                        app:cardElevation="10dp">
+
                         <LinearLayout
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:orientation="vertical">
-                            |<ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_baseline_speaker_notes_24">
+                            |
 
-                        </ImageView>
-                            <TextView
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:fontFamily="@font/alike"
-                                android:textColor="@color/black"
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
+                                android:background="@drawable/ic_baseline_speaker_notes_24">
+
+                            </ImageView>
+
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/alike"
+                                android:gravity="center"
                                 android:text="Notice"
+                                android:textColor="@color/black"
                                 android:textSize="20sp">
 
                             </TextView>
@@ -155,41 +195,49 @@
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_columnWeight="1"
                     android:orientation="vertical">
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/freetask"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="#D7654C"
                         app:cardElevation="10dp"
 
+
                         >
+
                         <LinearLayout
                             android:layout_width="150dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            |<ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_baseline_account_circle_24">
+                            |
 
-                        </ImageView>
-                            <TextView
-                                android:fontFamily="@font/alike"
-                                android:textColor="@color/black"
-                                android:layout_marginTop="10dp"
+                            <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/ic_baseline_account_circle_24">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/alike"
                                 android:text="Free Task"
+                                android:textColor="@color/black"
                                 android:textSize="20sp">
 
                             </TextView>
@@ -199,46 +247,54 @@
                 </LinearLayout>
 
             </GridLayout>
+
             <GridLayout
-                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_columnWeight="1"
                     android:orientation="vertical">
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/premiumtask"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
-                        app:cardElevation="10dp"
-                        >
+                        app:cardBackgroundColor="#D7654C"
+
+                        app:cardElevation="10dp">
+
                         <LinearLayout
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:orientation="vertical">
-                            |<ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_baseline_work_24">
+                            |
 
-                        </ImageView>
-                            <TextView
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/alike"
-                                android:textColor="@color/black"
+                            <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/ic_baseline_work_24">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/alike"
                                 android:text="Premium Task"
+                                android:textColor="@color/black"
                                 android:textSize="20sp">
 
                             </TextView>
@@ -247,41 +303,48 @@
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_columnWeight="1"
                     android:orientation="vertical">
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
-                        app:cardElevation="10dp"
                         android:onClick="wallet"
-                        >
+                        app:cardBackgroundColor="#D7654C"
+
+                        app:cardElevation="10dp">
+
                         <LinearLayout
                             android:layout_width="150dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            |<ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_baseline_monetization_on_24">
+                            |
 
-                        </ImageView>
-                            <TextView
-                                android:gravity="center"
-                                android:fontFamily="@font/alike"
-                                android:textColor="@color/black"
-                                android:layout_marginTop="10dp"
+                            <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/ic_baseline_monetization_on_24">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/alike"
+                                android:gravity="center"
                                 android:text="Wallet"
+                                android:textColor="@color/black"
                                 android:textSize="20sp">
 
                             </TextView>
@@ -295,4 +358,12 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </RelativeLayout>

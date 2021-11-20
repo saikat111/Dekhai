@@ -1,9 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen.PremiumTaskActivity">
+    android:padding="15dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#F64343"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    >
+
+    <TextView
+        android:textSize="25dp"
+        android:fontFamily="@font/alike"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Task Page : "></TextView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#DA5454"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            >
+            <TextView
+                android:id="@+id/date"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ></TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                >
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date : "
+                    ></TextView>
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:id="@+id/fulldate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                >
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance : "></TextView>
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ></TextView>
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" tk"
+                    ></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:textColor="#000"
+                android:id="@+id/notask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ></TextView>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:text="এড্স দেখতে নিচের বাটন এ ক্লিক করুন "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></TextView>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_downward_24"
+        >
+
+    </ImageView>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/adsshow"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="Show Ads"
+
+
+        >
+    </Button>
+
+
+
+</LinearLayout>
