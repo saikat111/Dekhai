@@ -62,10 +62,10 @@
                     app:boxBackgroundMode="outline"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-                    android:hint="Enter Your phone">
+                    android:hint="Enter Your Email">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/phone"
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -79,7 +79,7 @@
                     android:hint="Password">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/number"
+                        android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         />

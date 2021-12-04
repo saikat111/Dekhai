@@ -40,7 +40,7 @@ public class SplashScreen extends AppCompatActivity {
          /*       Intent homeIntent=new Intent(SplashScreen.this, LogInPageActivity.class);
                 startActivity(homeIntent);*/
                 if (FirebaseAuth.getInstance().getCurrentUser()==null){
-                Intent homeIntent=new Intent(getApplicationContext(), PhoneNumber.class);
+                Intent homeIntent=new Intent(getApplicationContext(), LogInPageActivity.class);
                 startActivity(homeIntent);
                 finish();
             }else{
