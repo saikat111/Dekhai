@@ -276,7 +276,8 @@
             android:elevation="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView">
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            android:background="@color/materialBackground">
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -285,7 +286,8 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="12dp"
-                android:paddingBottom="12dp">
+                android:paddingBottom="12dp"
+                android:background="@color/materialBackground">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/banner"
