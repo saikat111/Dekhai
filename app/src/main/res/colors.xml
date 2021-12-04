@@ -8,8 +8,4 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="welcome">#959C9F</color>
-
-
-    <color name="materialBackground">#eceff1</color>
-    <color name="materialForground">#cfd8dc</color>
 </resources>
