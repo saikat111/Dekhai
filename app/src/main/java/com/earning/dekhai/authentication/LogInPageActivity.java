@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.earning.dekhai.HomePageActivity;
 import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -45,7 +46,7 @@ public class LogInPageActivity extends AppCompatActivity {
                mAuth.signInWithEmailAndPassword(tempEmail,tempPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                    @Override
                    public void onSuccess(AuthResult authResult) {
-                       Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                       Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
                        startActivity(intent);
                        finish();
                    }

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.earning.dekhai.HomePageActivity;
 import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.earning.dekhai.authentication.LogInPageActivity;
@@ -37,7 +38,7 @@ public class SplashScreen extends AppCompatActivity {
             }
 
             public void onTransitionCompleted(@Nullable MotionLayout p0, int p1) {
-         /*       Intent homeIntent=new Intent(SplashScreen.this, LogInPageActivity.class);
+            /*    Intent homeIntent=new Intent(SplashScreen.this, HomePageActivity.class);
                 startActivity(homeIntent);*/
                 if (FirebaseAuth.getInstance().getCurrentUser()==null){
                 Intent homeIntent=new Intent(getApplicationContext(), LogInPageActivity.class);
@@ -45,7 +46,7 @@ public class SplashScreen extends AppCompatActivity {
                 finish();
             }else{
 
-                Intent homeIntent=new Intent(SplashScreen.this, MainActivity.class);
+                Intent homeIntent=new Intent(SplashScreen.this, HomePageActivity.class);
                 startActivity(homeIntent);
                 finish();
             }
