@@ -3,10 +3,13 @@ package com.earning.dekhai;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -17,6 +20,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.earning.dekhai.databinding.ActivityHomePageBinding;
 
 public class HomePageActivity extends AppCompatActivity {
+//    initializing variable
+    MeowBottomNavigation bottomNavigation;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomePageBinding binding;
@@ -28,14 +33,67 @@ public class HomePageActivity extends AppCompatActivity {
         binding = ActivityHomePageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBarHomePage.toolbar);
-        binding.appBarHomePage.fab.setOnClickListener(new View.OnClickListener() {
+//        assign variable
+        bottomNavigation=findViewById(R.id.bottom_navigation);
+
+//        add menu item
+        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_notifications));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_home));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_info));
+
+        bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onShowItem(MeowBottomNavigation.Model item) {
+//                initialize fragment
+                Fragment fragment=null;
+                switch (item.getId()){
+                    case 1:
+                        //                        when id is 1
+                        fragment= new NotificationFragment();
+                        break;
+                    case 2:
+                        //                        when id is 2
+                        fragment= new HomeFragment();
+                        break;
+                    case 3:
+                        //                        when id is 3
+                        fragment= new InfoFragment();
+                        break;
+                }
+//                load fragment
+                loadFragment(fragment);
             }
         });
+
+//        set notification count
+        bottomNavigation.setCount(1, String.valueOf(10));
+//        set fragment initially selected
+        bottomNavigation.show(2,true);
+         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
+             @Override
+             public void onClickItem(MeowBottomNavigation.Model item) {
+//                 display toast
+                 Toast.makeText(getApplicationContext(), "You clicked"+item.getId(), Toast.LENGTH_SHORT).show();
+             }
+         });
+
+
+         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
+             @Override
+             public void onReselectItem(MeowBottomNavigation.Model item) {
+                 Toast.makeText(getApplicationContext(), "You re-clicked"+item.getId(), Toast.LENGTH_SHORT).show();
+             }
+         });
+
+
+        setSupportActionBar(binding.appBarHomePage.toolbar);
+//        binding.appBarHomePage.fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -47,6 +105,14 @@ public class HomePageActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home_page);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    private void loadFragment(Fragment fragment) {
+//        replace fragment
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frame_layout,fragment)
+                .commit();
     }
 
     @Override
@@ -62,4 +128,7 @@ public class HomePageActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
+
