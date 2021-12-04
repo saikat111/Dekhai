@@ -17,6 +17,7 @@ import com.earning.dekhai.R;
 import com.earning.dekhai.authentication.PhoneNumber;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -31,7 +32,7 @@ public class ProfileData extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DocumentReference currentUserDb;
     private ProgressDialog progressDialog;
-    private EditText name, number, city;
+    TextInputEditText name ,number ,city;
     private Button save;
     String userId;
 
