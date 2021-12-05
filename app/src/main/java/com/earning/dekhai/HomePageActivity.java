@@ -1,14 +1,17 @@
 package com.earning.dekhai;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.earning.dekhai.screen.NoticeActivity;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -22,6 +25,7 @@ import com.earning.dekhai.databinding.ActivityHomePageBinding;
 public class HomePageActivity extends AppCompatActivity {
 //    initializing variable
     MeowBottomNavigation bottomNavigation;
+    ConstraintLayout notice;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomePageBinding binding;
@@ -35,6 +39,15 @@ public class HomePageActivity extends AppCompatActivity {
 
 //        assign variable
         bottomNavigation=findViewById(R.id.bottom_navigation);
+        notice=findViewById(R.id.notice);
+        notice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent=new Intent(getApplicationContext(), NoticeActivity.class);
+                startActivity(homeIntent);
+
+            }
+        });
 
 //        add menu item
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_notifications));
