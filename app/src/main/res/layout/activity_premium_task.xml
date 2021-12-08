@@ -8,7 +8,7 @@
     android:padding="15dp"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#F64343"
+    android:background="@color/materialBackground"
 
     >
 
@@ -40,7 +40,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="15dp"
-            >
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
             <TextView
                 android:id="@+id/date"
                 android:visibility="gone"

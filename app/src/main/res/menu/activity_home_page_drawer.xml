@@ -6,15 +6,39 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_membership"
+            android:icon="@drawable/ic_membership"
+            android:title="@string/membership" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_earn_cash"
+            android:icon="@drawable/ic_earn_cash"
+            android:title="@string/membership" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/ic_wallet"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/nav_order_list"
+            android:icon="@drawable/ic_order_list"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/nav_payment_history"
+            android:icon="@drawable/ic_payment_history"
+            android:title="@string/payment_history" />
+        <item
+            android:id="@+id/nav_youtube"
+            android:icon="@drawable/ic_youtube"
+            android:title="@string/youtube1" />
+        <item
+            android:id="@+id/nav_support_group"
+            android:icon="@drawable/ic_support_group"
+            android:title="@string/support_group" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
     </group>
 </menu>
