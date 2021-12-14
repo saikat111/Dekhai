@@ -7,20 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.earning.dekhai.screen.SplashScreen;
+import com.earning.dekhai.screen.MembarShipActivity;
 
-public class free_membership_page extends AppCompatActivity {
-    Button work;
-
+public class gold_membership_page extends AppCompatActivity {
+    Button active;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.free_membership_page_activity);
-        work = findViewById(R.id.work);
-        work.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_gold_membership_page);
+        active =  findViewById(R.id.active);
+        active.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MembarShipActivity.class);
                 startActivity(intent);
             }
         });

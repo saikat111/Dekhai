@@ -14,9 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
+            android:name=".gold_membership_page"
+            android:exported="false" />
+        <activity
+            android:name=".silver_membership_page"
+            android:exported="false" />
+        <activity
             android:name=".contact_us"
             android:exported="true" />
-
         <activity
             android:name=".order_list_page"
             android:exported="true" />

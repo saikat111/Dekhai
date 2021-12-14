@@ -101,7 +101,7 @@ public class OtpActivity extends AppCompatActivity {
                 userInfo.put("password",password );
                 userInfo.put("zip",zip);
                 userInfo.put("address",address);
-                userInfo.put("address",phonenumber);
+                userInfo.put("phone",phonenumber);
                 currentUserDb.set(userInfo).addOnSuccessListener(new OnSuccessListener() {
                     @Override
                     public void onSuccess(Object o) {

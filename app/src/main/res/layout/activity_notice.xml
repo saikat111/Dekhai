@@ -7,16 +7,31 @@
     android:layout_height="match_parent"
     android:background="@color/materialBackground"
     >
+
    <androidx.core.widget.NestedScrollView
        android:padding="8dp"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginBottom="50dp">
+
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="center"
           android:orientation="vertical">
+          <com.google.android.material.appbar.AppBarLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <com.google.android.material.appbar.MaterialToolbar
+                  android:id="@+id/topAppBar"
+                  android:layout_width="match_parent"
+                  android:layout_height="?attr/actionBarSize"
+                  app:title="Notice"
+                  style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                  android:background="#9F7F7F"
+                  />
+
+          </com.google.android.material.appbar.AppBarLayout>
         <!-- <TextView
              android:textSize="20dp"
              android:textColor="#000"

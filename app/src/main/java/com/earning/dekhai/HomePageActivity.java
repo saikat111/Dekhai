@@ -25,7 +25,7 @@ import com.earning.dekhai.databinding.ActivityHomePageBinding;
 public class HomePageActivity extends AppCompatActivity {
 //    initializing variable
     MeowBottomNavigation bottomNavigation;
-    ConstraintLayout notice, earning;
+    ConstraintLayout notice, earning ,support_chat;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomePageBinding binding;
@@ -41,6 +41,15 @@ public class HomePageActivity extends AppCompatActivity {
         bottomNavigation=findViewById(R.id.bottom_navigation);
         notice=findViewById(R.id.notice);
         earning=findViewById(R.id.earning);
+        support_chat=findViewById(R.id.support_chat);
+        support_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent=new Intent(getApplicationContext(), contact_us.class);
+                startActivity(homeIntent);
+
+            }
+        });
         notice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +61,7 @@ public class HomePageActivity extends AppCompatActivity {
         earning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent=new Intent(getApplicationContext(), MainActivity.class);
+                Intent homeIntent=new Intent(getApplicationContext(), earn_cash.class);
                 startActivity(homeIntent);
 
             }
