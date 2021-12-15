@@ -442,7 +442,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
-                        android:text="Support Chat"
+                        android:text="Contact Us"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"

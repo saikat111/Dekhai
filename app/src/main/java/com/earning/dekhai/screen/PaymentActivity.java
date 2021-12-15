@@ -41,7 +41,7 @@ public class PaymentActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     String type;
     RadioButton typerradioButton;
-    TextView  numberb;
+    TextView  numberb, n;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class PaymentActivity extends AppCompatActivity {
         number = findViewById(R.id.number);
         td = findViewById(R.id.transactionid);
         numberb = findViewById(R.id.numberb);
+        n = findViewById(R.id.n);
 
         radioGroup = findViewById(R.id.radioGroup);
         progressDialog = new ProgressDialog(this);
@@ -120,6 +121,7 @@ public class PaymentActivity extends AppCompatActivity {
                     if (map.get("bkash") != null) {
                         String aboutForDisplay = map.get("bkash").toString();
                         numberb.setText(aboutForDisplay);
+                        n.setText(aboutForDisplay);
                     }
                 }
             }

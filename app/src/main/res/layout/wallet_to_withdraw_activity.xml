@@ -114,6 +114,18 @@
                             android:text="Balance"
                             android:textSize="16sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/password"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:text="Balance"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
 
                     </LinearLayout>
@@ -140,7 +152,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
-                            android:id="@+id/balance"
+                            android:id="@+id/tk"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="5dp"
@@ -202,17 +214,19 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
+                            android:visibility="gone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:textColor="@color/black"
-                            android:text="Withdraw Amount"
+                            android:text="Bkash/Nogod number"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <EditText
+                            android:visibility="gone"
                             android:id="@+id/etWithdrawAmount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -237,7 +251,7 @@
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:id="@+id/numberb"
+                        android:id="@+id/num"
                         android:textSize="20sp"
                         android:layout_marginTop="15dp"
                         android:layout_width="wrap_content"
@@ -313,7 +327,7 @@
                             android:textStyle="bold" />
 
                         <EditText
-                            android:id="@+id/etBkashNagad"
+                            android:id="@+id/numberb"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Enter Bkash/Nagad Num"
@@ -401,7 +415,8 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/tvAccountPoneNumber"
+
+                            android:id="@+id/userNumber"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -441,6 +456,7 @@
                 android:background="@color/materialBackground">
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/btnOk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -448,8 +464,6 @@
                     app:backgroundTint="@color/materialForground"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_columnWeight=".5"/>
-
-
             </GridLayout>
 
         </androidx.cardview.widget.CardView>
@@ -502,16 +516,16 @@
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:textColor="@color/black"
-                            android:text="OTP"
+                            android:text="Password"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <EditText
-                            android:id="@+id/etOtp"
+                            android:id="@+id/pass"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
-                            android:hint="Enter OTP"
+                            android:hint="Enter password"
                             android:textColorHint="@color/black"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
@@ -550,7 +564,7 @@
                 android:background="@color/materialBackground">
 
                 <Button
-                    android:id="@+id/btnSubmit"
+                    android:id="@+id/withdraw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Submit"

@@ -112,7 +112,7 @@
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:textColor="@color/black"
-                            android:text="Free Account"
+                            android:text="Silver Account"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -246,7 +246,7 @@
                             android:textColor="@color/black"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
-                            android:text=".10"
+                            android:text=".50"
                             android:textSize="16sp" />
 
                     </LinearLayout>

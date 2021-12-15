@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".free_membership_page">
+   >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:textColor="@color/black"
-                            android:text="Free Account"
+                            android:text="gold Account"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -158,6 +158,7 @@
                             android:textColor="@color/black"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
+                            android:text="12000 tk"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -199,9 +200,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
-                            android:text="100"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
+                            android:text="100"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -236,7 +237,6 @@
                             android:textColor="@color/black"
                             android:text="Per Ads View"
                             android:textSize="16sp"
-
                             android:textStyle="bold" />
 
                         <TextView
@@ -244,9 +244,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
+                            android:text="1 tk"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
-                            android:text=".10"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -288,9 +288,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
+                            android:text="0"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
-                            android:text="0"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -334,13 +334,19 @@
                             android:textColor="@color/black"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
-                            android:text="500"
+                            android:text="500 tk"
                             android:textSize="16sp" />
+
                     </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+
             </GridLayout>
+
         </androidx.cardview.widget.CardView>
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
             android:layout_width="match_parent"
@@ -352,6 +358,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView2"
             android:background="@color/materialBackground">
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -361,18 +368,23 @@
                 android:paddingEnd="10dp"
                 android:paddingBottom="12dp"
                 android:background="@color/materialBackground">
+
                 <Button
-                    android:id="@+id/work"
+                    android:id="@+id/active"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="work"
+                    android:text="Activate"
                     android:textColor="@color/black"
                     app:backgroundTint="@color/materialForground"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_columnWeight="1"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"/>
+
             </GridLayout>
+
         </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

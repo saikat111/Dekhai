@@ -2,15 +2,18 @@ package com.earning.dekhai;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
 import com.earning.dekhai.screen.NoticeActivity;
+import com.earning.dekhai.screen.ProfileData;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -22,13 +25,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.earning.dekhai.databinding.ActivityHomePageBinding;
 
-public class HomePageActivity extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 //    initializing variable
     MeowBottomNavigation bottomNavigation;
-    ConstraintLayout notice, earning;
+    ConstraintLayout notice, earning ,support_chat;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomePageBinding binding;
+
+
+
+    private Menu menu;
+    private MenuItem nav_home,nav_membership,nav_earn_cash,nav_wallet,nav_order_list,nav_payment_history,nav_youtube,nav_support_group,nav_logout;
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +50,15 @@ public class HomePageActivity extends AppCompatActivity {
         bottomNavigation=findViewById(R.id.bottom_navigation);
         notice=findViewById(R.id.notice);
         earning=findViewById(R.id.earning);
+        support_chat=findViewById(R.id.support_chat);
+        support_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent=new Intent(getApplicationContext(), contact_us.class);
+                startActivity(homeIntent);
+
+            }
+        });
         notice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +70,26 @@ public class HomePageActivity extends AppCompatActivity {
         earning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent=new Intent(getApplicationContext(), MainActivity.class);
+                Intent homeIntent=new Intent(getApplicationContext(), earn_cash.class);
                 startActivity(homeIntent);
 
             }
         });
+//        initialize side navigation
+        NavigationView navigationView1 = findViewById(R.id.nav_view);
+        menu = navigationView1.getMenu();
+        nav_home = menu.findItem(R.id.nav_home);
+        nav_membership = menu.findItem(R.id.nav_membership);
+        nav_earn_cash = menu.findItem(R.id.nav_earn_cash);
+        nav_wallet = menu.findItem(R.id.nav_wallet);
+        nav_order_list = menu.findItem(R.id.nav_order_list);
+        nav_payment_history = menu.findItem(R.id.nav_payment_history);
+        nav_youtube = menu.findItem(R.id.nav_youtube);
+        nav_support_group = menu.findItem(R.id.nav_support_group);
+        nav_logout = menu.findItem(R.id.nav_logout);
+
+
+
 
 //        add menu item
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_notifications));
@@ -116,18 +149,40 @@ public class HomePageActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+//        DrawerLayout drawer = binding.drawerLayout;
+//        NavigationView navigationView = binding.navView;
+//        // Passing each menu ID as a set of Ids because each
+//        // menu should be considered as top level destinations.
+//        mAppBarConfiguration = new AppBarConfiguration.Builder(
+//                R.id.nav_home, R.id.nav_membership, R.id.nav_earn_cash)
+//                .setOpenableLayout(drawer)
+//                .build();
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home_page);
+//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+//        NavigationUI.setupWithNavController(navigationView, navController);
+
+
+        drawerLayout = findViewById(R.id.drawer_layout);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setOpenableLayout(drawer)
+                R.id.nav_home, R.id.nav_membership, R.id.nav_earn_cash)
+                .setOpenableLayout(drawerLayout)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home_page);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        NavigationUI.setupWithNavController(navigationView1, navController);
+
+        if (navigationView1 != null) {
+            navigationView1.setNavigationItemSelectedListener(this);
+        }
+
+
+
+
     }
+
+
+
+
 
     private void loadFragment(Fragment fragment) {
 //        replace fragment
@@ -142,6 +197,50 @@ public class HomePageActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home_page, menu);
         return true;
+    }
+
+
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+        if (id == R.id.nav_membership) {
+
+            Intent intentMembership = new Intent(this, membership_page.class);
+            startActivity(intentMembership);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_earn_cash){
+
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_wallet){
+
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_order_list){
+
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_payment_history){
+
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_youtube){
+
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_support_group){
+
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }else if(id == R.id.nav_logout){
+
+
+
+        }
+
+        closeOptionsMenu();
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

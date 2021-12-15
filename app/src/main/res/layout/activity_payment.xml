@@ -91,11 +91,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TYPE 01812-225858"
+                            android:text="TYPE "
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:textSize="13sp"/>
                         <ImageView
                             android:layout_width="wrap_content"
@@ -229,7 +233,7 @@
                     android:textColor="#000"
                     android:textColorHint="#4ABDFF" />
 
-                <TextView
+               <!-- <TextView
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
@@ -246,7 +250,7 @@
                     android:fontFamily="@font/alike"
                     android:hint="@string/dex"
                     android:textColor="#000"
-                    android:textColorHint="#4ABDFF" />
+                    android:textColorHint="#4ABDFF" />-->
 
                 <Button
                     android:layout_width="wrap_content"
