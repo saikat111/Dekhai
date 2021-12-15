@@ -15,7 +15,7 @@
         <item
             android:id="@+id/nav_earn_cash"
             android:icon="@drawable/ic_earn_cash"
-            android:title="@string/membership" />
+            android:title="@string/earn_cash" />
         <item
             android:id="@+id/nav_wallet"
             android:icon="@drawable/ic_wallet"
@@ -23,7 +23,7 @@
         <item
             android:id="@+id/nav_order_list"
             android:icon="@drawable/ic_order_list"
-            android:title="@string/wallet" />
+            android:title="@string/ordrt_list" />
         <item
             android:id="@+id/nav_payment_history"
             android:icon="@drawable/ic_payment_history"
