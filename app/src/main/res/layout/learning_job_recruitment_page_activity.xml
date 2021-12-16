@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearningJobRecruitmentPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:background="@color/materialBackground">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:elevation="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:background="@color/materialBackground">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/banner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight=".25"
+                    android:background="@drawable/new_background2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/banner_img" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:paddingStart="10dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="12dp"
+                android:background="@color/materialBackground">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight=".25"
+                    android:background="@color/materialForground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:text="JOB RECRUITMENT COURSES"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnBCS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="280dp"
+                    android:layout_columnWeight=".25"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="BCS PREPARATION"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+
+                <Button
+                    android:id="@+id/btnBDJSE"
+                    android:layout_height="wrap_content"
+                    android:layout_width="280dp"
+                    android:layout_columnWeight=".25"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="BANGLADESH JUUDICIAL SERVICE EXAMINATION"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+
+                <Button
+                    android:id="@+id/btnBankJob"
+                    android:layout_height="wrap_content"
+                    android:layout_width="280dp"
+                    android:layout_columnWeight=".25"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="BANK JOB "
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+
+                <Button
+                    android:id="@+id/btnPrimaryAssistant"
+                    android:layout_height="wrap_content"
+                    android:layout_width="280dp"
+                    android:layout_columnWeight=".25"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="PRIMARY ASSISTANT TEACHER RECRUITMENT "
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+
+                <Button
+                    android:id="@+id/btnAllJobSolution"
+                    android:layout_height="wrap_content"
+                    android:layout_width="280dp"
+                    android:layout_columnWeight=".25"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/all_jobs_question_solution_bank"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

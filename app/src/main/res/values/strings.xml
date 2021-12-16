@@ -21,6 +21,35 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Logout</string>
+    <string name="support_group">Support Group</string>
+    <string name="payment_history">Payment History</string>
+    <string name="wallet">Wallet</string>
+    <string name="membership">Membership</string>
+    <string name="youtube1">YouTube</string>
+    <string name="show_ads">Show Ads</string>
+    <string name="click_below">এড্স দেখতে নিচের বাটন এ ক্লিক করুন</string>
+    <string name="task_page">Task Page :</string>
+    <string name="date">Date :</string>
+    <string name="balance">Balance :</string>
+    <string name="tk">tk</string>
+    <string name="submit">Submit</string>
+    <string name="dex">DEX-</string>
+    <string name="dekhai_id">Dekhai id</string>
+    <string name="amount">Amount</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="transaction_id">Transaction id</string>
+    <string name="enter_transaction_id">Enter transaction id</string>
+    <string name="number">Number</string>
+    <string name="enter_your_bkash_nogod_number">Enter your Bkash/Nogod number</string>
+    <string name="nogod">Nogod</string>
+    <string name="bkash">Bkash</string>
+    <string name="ordrt_list">Ordrt List</string>
+    <string name="earn_cash">Earn Cash</string>
+    <string name="web_graphic_desinging_pro"><![CDATA[WEB & GRAPHIC DESINGING PRO]]></string>
+    <string name="all_jobs_question_solution_bank"><![CDATA[ALL JOBS QUESTION & SOLUTION BANK]]></string>
+    <string name="presentation_public_speaking"><![CDATA[PRESENTATION & PUBLIC SPEAKING]]></string>
+    <string name="communication_negotiation"><![CDATA[COMMUNICATION & NEGOTIATION]]></string>
 
 
 </resources>

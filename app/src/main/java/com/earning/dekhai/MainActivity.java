@@ -152,11 +152,11 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(browserIntent);*/
                         }
                         if (drawerItem == item2) {
-                            Intent homeIntent=new Intent(getApplicationContext(), MembarShipActivity.class);
+                            Intent homeIntent=new Intent(getApplicationContext(), membership_page.class);
                             startActivity(homeIntent);
                         }
                         if (drawerItem == item3) {
-                            Intent homeIntent=new Intent(MainActivity.this, Wallet.class);
+                            Intent homeIntent=new Intent(MainActivity.this, wallet_to_withdraw.class);
                             startActivity(homeIntent);
 
                         /*    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.youtube)));
@@ -461,7 +461,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void wallet(View view) {
-        Intent homeIntent=new Intent(MainActivity.this, Wallet.class);
+        Intent homeIntent=new Intent(MainActivity.this, wallet_to_withdraw.class);
         startActivity(homeIntent);
 
     }
@@ -483,5 +483,12 @@ public class MainActivity extends AppCompatActivity {
             adView.destroy();
         }
         super.onDestroy();
+    }
+
+    public void home(View view) {
+        Intent homeIntent=new Intent(MainActivity.this, HomePageActivity.class);
+        startActivity(homeIntent);
+        finish();
+
     }
 }

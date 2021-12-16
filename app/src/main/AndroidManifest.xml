@@ -14,9 +14,67 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
+            android:name=".ProfessionalCourses"
+            android:exported="false" />
+        <activity
+            android:name=".LearningJobRecruitmentPage"
+            android:exported="false" />
+        <activity
+            android:name=".LearningCompetitiveExam"
+            android:exported="false" />
+        <activity
+            android:name=".LearningSkillDevelopmentPage"
+            android:exported="false" />
+        <activity
+            android:name=".LanguageLearningPage"
+            android:exported="false" />
+        <activity
+            android:name=".LearningPageHome"
+            android:exported="false" />
+        <activity
+            android:name=".payment_history"
+            android:exported="true" />
+        <activity
+            android:name=".gold_membership_page"
+            android:exported="false" />
+        <activity
+            android:name=".silver_membership_page"
+            android:exported="false" />
+        <activity
+            android:name=".contact_us"
+            android:exported="true" />
+        <activity
+            android:name=".order_list_page"
+            android:exported="true" />
+        <activity
+            android:name=".wallet_to_withdraw"
+            android:exported="true" />
+        <activity
+            android:name=".view_wallet_page"
+            android:exported="true" />
+        <activity
+            android:name=".earn_cash"
+            android:exported="true" />
+        <activity
+            android:name=".earn_cash_view_page"
+            android:exported="true" />
+        <activity
+            android:name=".payment_page"
+            android:exported="true" />
+        <activity
+            android:name=".free_membership_page"
+            android:exported="true" />
+        <activity
+            android:name=".membership_page"
+            android:exported="true" />
+        <activity
+            android:name=".profile_page"
+            android:exported="true" />
+        <activity
             android:name=".authentication.RegistrationPage"
             android:exported="false" />
-        <activity android:name=".HomePageActivity"
+        <activity
+            android:name=".HomePageActivity"
             android:exported="false" />
         <activity
             android:name=".authentication.LogInPageActivity"
