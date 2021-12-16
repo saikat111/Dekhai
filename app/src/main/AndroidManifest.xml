@@ -14,6 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
+            android:name=".ProfessionalCourses"
+            android:exported="false" />
+        <activity
+            android:name=".LearningJobRecruitmentPage"
+            android:exported="false" />
+        <activity
+            android:name=".LearningCompetitiveExam"
+            android:exported="false" />
+        <activity
+            android:name=".LearningSkillDevelopmentPage"
+            android:exported="false" />
+        <activity
+            android:name=".LanguageLearningPage"
+            android:exported="false" />
+        <activity
+            android:name=".LearningPageHome"
+            android:exported="false" />
+        <activity
+            android:name=".payment_history"
+            android:exported="true" />
+        <activity
             android:name=".gold_membership_page"
             android:exported="false" />
         <activity
