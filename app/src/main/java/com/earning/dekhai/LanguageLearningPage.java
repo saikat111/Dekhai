@@ -13,12 +13,12 @@ public class LanguageLearningPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.language_learning_page_activity);
-        l = findViewById(R.id.j);
+       /* l = findViewById(R.id.j);
         l.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 }
