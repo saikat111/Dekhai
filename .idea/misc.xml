@@ -3,100 +3,51 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/background_update.xml" value="0.262037037037037" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/buttondesign.xml" value="0.262037037037037" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/cell_shape.xml" value="0.262037037037037" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/dialog_relate.xml" value="0.262037037037037" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.262037037037037" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_monetization_on_24.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_speaker_notes_24.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_cancel.xml" value="0.262037037037037" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_info.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_menu_camera.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_notifications.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_wallet.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/layout_bg.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/new_background.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/new_background1.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/new_background2.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/side_nav_bar.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_free_task.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_home_page.xml" value="0.12158054711246201" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_log_in_page.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_membar_ship.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_notice.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_payment.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_phone_number.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_premium_task.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_profile_data.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_registration_page.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_splash_screen.xml" value="0.12158054711246201" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_verify_phone.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/activity_wallet.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/app_bar_home_page.xml" value="0.12158054711246201" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/contact_us_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/content_home_page.xml" value="0.11955420466058764" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/earn_cash_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/earn_cash_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/fragment_home.xml" value="0.12158054711246201" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/fragment_home2.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/fragment_info.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/fragment_notification.xml" value="0.12158054711246201" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/fragment_slideshow.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/free_membership_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/language_learning_page_activity.xml" value="0.2359375" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/learning_competitive_exam_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/learning_job_recruitment_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/learning_page_home_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/learning_skill_development_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/membership_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/membershipitem.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/nav_header_home_page.xml" value="0.12158054711246201" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/noticecard.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/order_list_item_layout.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/order_list_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/payment_confirmation_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/payment_history_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/payment_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/professional_courses_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/profile_page_activity.xml" value="0.2020460358056266" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/view_wallet_page_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/wallet_to_withdraw_activity.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/menu/activity_home_page_drawer.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/menu/home_page.xml" value="0.2212962962962963" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/menu/top_bar.xml" value="0.25" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26205128205128203" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.26205128205128203" />
+        <entry key="..\:/dekhai/app/src/main/res/drawable/background_update.xml" value="0.25052083333333336" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/gradient.xml" value="0.22760416666666666" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/ic_baseline_speaker_notes_24.xml" value="0.2546875" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.2546875" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_free_task.xml" value="0.2" />
-        <entry key="..\:/dekhai/app/src/main/res/layout/activity_log_in_page.xml" value="0.144" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_gold_membership_page.xml" value="0.2359375" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_home_page.xml" value="0.15081521739130435" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_log_in_page.xml" value="0.152" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_membar_ship.xml" value="0.24010416666666667" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_notice.xml" value="0.24010416666666667" />
-        <entry key="..\:/dekhai/app/src/main/res/layout/activity_payment.xml" value="0.2" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_payment.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_phone_number.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_premium_task.xml" value="0.20625" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_profile.xml" value="0.23072916666666668" />
-        <entry key="..\:/dekhai/app/src/main/res/layout/activity_profile_data.xml" value="0.264" />
-        <entry key="..\:/dekhai/app/src/main/res/layout/activity_registration_page.xml" value="0.24010416666666667" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_profile_data.xml" value="0.2" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_registration_page.xml" value="0.264" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_silver_membership_page.xml" value="0.25" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_splash_screen.xml" value="0.23854166666666668" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_verify_phone.xml" value="0.23854166666666668" />
-        <entry key="..\:/dekhai/app/src/main/res/layout/activity_wallet.xml" value="0.2" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_wallet.xml" value="0.264" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/app_bar_home_page.xml" value="0.15172101449275363" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/contact_us_activity.xml" value="0.25" />
         <entry key="..\:/dekhai/app/src/main/res/layout/content_home_page.xml" value="0.17617753623188406" />
         <entry key="..\:/dekhai/app/src/main/res/layout/de.xml" value="0.21979166666666666" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/earn_cash_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/earn_cash_view_page_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/fragment_notification.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/free_membership_page_activity.xml" value="0.234375" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/language_learning_page_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/learning_competitive_exam_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/learning_job_recruitment_page_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/learning_page_home_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/learning_skill_development_page_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/membership_page_activity.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/membershipitem.xml" value="0.25416666666666665" />
-        <entry key="..\:/dekhai/app/src/main/res/layout/noticecard.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/nav_header_home_page.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/noticecard.xml" value="0.2" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/order_list_item_layout.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/order_list_page_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/payment_confirmation_page_activity.xml" value="0.264" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/payment_page_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/profile_page_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/wallet_to_withdraw_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/menu/home_page_menu.xml" value="0.2359375" />
         <entry key="..\:/dekhai/app/src/main/res/menu/top_bar.xml" value="0.25416666666666665" />
       </map>
     </option>

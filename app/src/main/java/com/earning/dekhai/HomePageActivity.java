@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.earning.dekhai.screen.NoticeActivity;
 import com.earning.dekhai.screen.ProfileData;
+import com.earning.dekhai.screen.SplashScreen;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -24,14 +25,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.earning.dekhai.databinding.ActivityHomePageBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePageActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 //    initializing variable
     MeowBottomNavigation bottomNavigation;
-    ConstraintLayout notice, earning ,support_chat;
+    ConstraintLayout notice, earning ,support_chat ,learning , how_to_earn, essential_links, shopping;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomePageBinding binding;
+    private FirebaseAuth mAuth;
 
 
 
@@ -45,17 +48,53 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
 
         binding = ActivityHomePageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        mAuth = FirebaseAuth.getInstance();
 
 //        assign variable
         bottomNavigation=findViewById(R.id.bottom_navigation);
         notice=findViewById(R.id.notice);
         earning=findViewById(R.id.earning);
         support_chat=findViewById(R.id.support_chat);
+        learning=findViewById(R.id.learning);
+        how_to_earn=findViewById(R.id.how_to_earn);
+        essential_links=findViewById(R.id.essential_links);
+        shopping=findViewById(R.id.shopping);
+        shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
+            }
+        });
+        how_to_earn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent=new Intent(getApplicationContext(), membership_page.class);
+                startActivity(homeIntent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+            }
+        });
+        essential_links.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
+            }
+        });
+        learning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent=new Intent(getApplicationContext(), LearningPageHome.class);
+                startActivity(homeIntent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+            }
+        });
         support_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent homeIntent=new Intent(getApplicationContext(), contact_us.class);
                 startActivity(homeIntent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
 
             }
         });
@@ -64,6 +103,8 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
             public void onClick(View v) {
                 Intent homeIntent=new Intent(getApplicationContext(), NoticeActivity.class);
                 startActivity(homeIntent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
 
             }
         });
@@ -72,6 +113,8 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
             public void onClick(View v) {
                 Intent homeIntent=new Intent(getApplicationContext(), earn_cash.class);
                 startActivity(homeIntent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
 
             }
         });
@@ -128,7 +171,8 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
              @Override
              public void onClickItem(MeowBottomNavigation.Model item) {
 //                 display toast
-                 Toast.makeText(getApplicationContext(), "You clicked"+item.getId(), Toast.LENGTH_SHORT).show();
+                /* Toast.makeText(getApplicationContext(), "You clicked"+item.getId(), Toast.LENGTH_SHORT).show();*/
+                 Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
              }
          });
 
@@ -211,31 +255,40 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
 
         }else if(id == R.id.nav_earn_cash){
 
+            Intent intentearncash = new Intent(this, earn_cash.class);
+            startActivity(intentearncash);
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
         }else if(id == R.id.nav_wallet){
-
+            Intent intentwallet_to_withdraw = new Intent(this, wallet_to_withdraw.class);
+            startActivity(intentwallet_to_withdraw);
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
         }else if(id == R.id.nav_order_list){
-
+            Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
         }else if(id == R.id.nav_payment_history){
-
+            Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
         }else if(id == R.id.nav_youtube){
-
+            Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
         }else if(id == R.id.nav_support_group){
-
+            Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
         }else if(id == R.id.nav_logout){
-
-
+            try {
+                mAuth.signOut();
+                Intent intent = new Intent(getApplicationContext(), SplashScreen.class);
+                startActivity(intent);
+                finish();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         }
 

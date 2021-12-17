@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.earning.dekhai.HomePageActivity;
 import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.earning.dekhai.screen.ProfileData;
@@ -93,35 +94,17 @@ public class OtpActivity extends AppCompatActivity {
         mAuth.getCurrentUser().linkWithCredential(credential).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                userId = mAuth.getCurrentUser().getUid();
-                currentUserDb = FirebaseFirestore.getInstance().collection("user").document(userId);
-                Map userInfo = new HashMap();
-                userInfo.put("name",name );
-                userInfo.put("email",email );
-                userInfo.put("password",password );
-                userInfo.put("zip",zip);
-                userInfo.put("address",address);
-                userInfo.put("phone",phonenumber);
-                currentUserDb.set(userInfo).addOnSuccessListener(new OnSuccessListener() {
-                    @Override
-                    public void onSuccess(Object o) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
                         startActivity(intent);
                         finish();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getApplicationContext(), "e.getMessage()", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });
