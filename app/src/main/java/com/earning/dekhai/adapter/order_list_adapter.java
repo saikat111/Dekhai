@@ -1,4 +1,4 @@
-package com.earning.dekhai.model;
+package com.earning.dekhai.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.earning.dekhai.R;
+import com.earning.dekhai.model.order_list_model;
 
 import java.util.List;
 

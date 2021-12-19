@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
-            android:name=".authentication.OtpActivity"
+            android:name=".payment_history_cashout"
             android:exported="false" />
         <activity
             android:name=".ProfessionalCourses"
