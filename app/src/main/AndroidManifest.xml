@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
+            android:name=".payment_history_cashout"
+            android:exported="true" />
+        <activity
             android:name=".ProfessionalCourses"
             android:exported="false" />
         <activity

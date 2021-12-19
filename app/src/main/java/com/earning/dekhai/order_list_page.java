@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.earning.dekhai.model.order_list_adapter;
+import com.earning.dekhai.adapter.order_list_adapter;
 import com.earning.dekhai.model.order_list_model;
 
 import java.util.ArrayList;

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3,4,5">
+
+    <TableRow
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tvDekhaiID"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvWalletIdP"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="1dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvAmountP"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="1dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvReqDate"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="1dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvConfDate"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="1dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvStatusP"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="1dp"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+    </TableRow>
+
+</TableLayout>
