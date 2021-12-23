@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
+            android:name=".ShoppingPage"
+            android:exported="true" />
+        <activity
             android:name=".payment_history_cashout"
             android:exported="false" />
         <activity

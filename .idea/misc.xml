@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/dekhai/app/src/main/res/drawable/background_update.xml" value="0.25052083333333336" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26205128205128203" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/background_update.xml" value="0.262037037037037" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/buttondesign.xml" value="0.262037037037037" />
@@ -15,6 +14,7 @@
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.26205128205128203" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_speaker_notes_24.xml" value="0.26205128205128203" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.26205128205128203" />
+        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_bdt.xml" value="0.26614583333333336" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_cancel.xml" value="0.262037037037037" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_info.xml" value="0.26205128205128203" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26205128205128203" />
@@ -72,6 +72,9 @@
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/payment_page_activity.xml" value="0.25" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/professional_courses_activity.xml" value="0.25" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/profile_page_activity.xml" value="0.2020460358056266" />
+        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/shoping_page_category_item.xml" value="0.25" />
+        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/shoping_page_products_item.xml" value="0.25" />
+        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/shopping_page_activity.xml" value="0.25" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/view_wallet_page_activity.xml" value="0.25" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/wallet_to_withdraw_activity.xml" value="0.25" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/menu/activity_home_page_drawer.xml" value="0.25" />
@@ -79,6 +82,7 @@
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/menu/top_bar.xml" value="0.25" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26205128205128203" />
         <entry key="..\:/Dekhai/Dekhai/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.26205128205128203" />
+        <entry key="..\:/dekhai/app/src/main/res/drawable/background_update.xml" value="0.25052083333333336" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/gradient.xml" value="0.22760416666666666" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/ic_baseline_speaker_notes_24.xml" value="0.2546875" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.2546875" />
