@@ -9,12 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
-import com.earning.dekhai.authentication.PhoneNumber;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
@@ -39,7 +37,11 @@ public class ProfileData extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        setContentView(R.layout.login_page_activity);
+
         setContentView(R.layout.activity_profile_data);
+
         number = findViewById(R.id.number);
         name = findViewById(R.id.name);
         city = findViewById(R.id.city);

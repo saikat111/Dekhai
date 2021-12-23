@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screen.ProfileData">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:background="@color/materialBackground">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:paddingStart="10dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="10dp"
+                android:background="@color/materialBackground">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/learning"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight=".25"
+                    android:background="@drawable/new_background"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/dekai" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:text="@string/the_biggest_online_platform_for_learning_raening_shopping"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:background="@color/materialBackground">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/banner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight=".25"
+                    android:background="@drawable/new_background2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/banner_img" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@color/materialBackground">
+
+                <Button
+                    android:id="@+id/btnLanguageLearning"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_columnWeight=".5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Sign In"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+                <Button
+                    android:id="@+id/singup"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_columnWeight=".5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Sign Up"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/buttondesign"/>
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:paddingStart="10dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="12dp"
+                android:background="@color/materialBackground">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPhoneLogin"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Enter Your Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:inputType="phone"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPasswordLogin"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="end"
+                    android:hint="Password"
+                    app:endIconMode="password_toggle"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:inputType="textPassword" />
+
+                    <CheckBox
+                        android:id="@+id/cbKeepSignedIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KEEP ME SIGNED IN"/>
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_columnWeight=".5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Sign In"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        app:backgroundTint="@color/white"
+                        android:background="@drawable/buttondesign"/>
+
+                    <Button
+                        android:id="@+id/btnForgetPassword"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Forgot Your Password?"
+                        android:textSize="12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3"
+            android:background="@color/materialBackground">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingStart="10dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="12dp"
+                android:background="@color/materialBackground">
+
+
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
