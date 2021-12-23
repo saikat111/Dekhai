@@ -6,16 +6,35 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.earning.dekhai.adapter.SliderAdapter;
 import com.earning.dekhai.adapter.order_list_adapter;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 public class ShoppingPage extends AppCompatActivity {
 
     RecyclerView shooping_category,shooping_products;
 
+    SliderView sliderView;
+    int[] images = {R.drawable.banner_img,
+            R.drawable.banner_img,
+            R.drawable.banner_img};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_page_activity);
+
+        sliderView = findViewById(R.id.shopping_image_slider);
+
+        SliderAdapter sliderAdapter = new SliderAdapter(images);
+
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
+
 
         shooping_category=findViewById(R.id.shooping_category);
         shooping_products=findViewById(R.id.shooping_products);
