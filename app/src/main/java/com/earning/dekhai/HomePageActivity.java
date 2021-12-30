@@ -62,7 +62,9 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Available soon" , Toast.LENGTH_SHORT).show();
+                Intent homeIntent=new Intent(getApplicationContext(), ShoppingPage.class);
+                startActivity(homeIntent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
             }
         });
         how_to_earn.setOnClickListener(new View.OnClickListener() {

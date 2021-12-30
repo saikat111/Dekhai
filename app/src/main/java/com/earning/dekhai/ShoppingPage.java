@@ -6,8 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.earning.dekhai.adapter.CategoryAdapter;
+import com.earning.dekhai.adapter.MemberShipAdapter;
 import com.earning.dekhai.adapter.SliderAdapter;
 import com.earning.dekhai.adapter.order_list_adapter;
+import com.earning.dekhai.model.CategoryModel;
+import com.earning.dekhai.model.MembershipModel;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -15,6 +23,7 @@ import com.smarteist.autoimageslider.SliderView;
 public class ShoppingPage extends AppCompatActivity {
 
     RecyclerView shooping_category,shooping_products;
+    CategoryAdapter  ca;
 
     SliderView sliderView;
     int[] images = {R.drawable.banner_img,
@@ -39,14 +48,29 @@ public class ShoppingPage extends AppCompatActivity {
         shooping_category=findViewById(R.id.shooping_category);
         shooping_products=findViewById(R.id.shooping_products);
 
-        setShoppingRecyclerView();
+
+
+
+        FirebaseFirestore find = FirebaseFirestore.getInstance();
+        CollectionReference collection = find.collection("membership");
+        Query query = collection.orderBy("order");
+        shooping_category.setLayoutManager(new LinearLayoutManager(this));
+        FirestoreRecyclerOptions<CategoryModel> options7 =
+                new FirestoreRecyclerOptions.Builder<CategoryModel>()
+                        .setQuery(query, CategoryModel.class)
+                        .build();
+        ca = new CategoryAdapter(options7);
+        shooping_category.setAdapter(ca);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ca.startListening();
     }
 
-    private void setShoppingRecyclerView() {
-        shooping_category.setHasFixedSize(true);
-        shooping_category.setLayoutManager(new LinearLayoutManager(this));
-
-        shooping_products.setHasFixedSize(true);
-        shooping_products.setLayoutManager(new LinearLayoutManager(this));
+    @Override
+    protected void onStop() {
+        super.onStop();
+        ca.stopListening();
     }
 }

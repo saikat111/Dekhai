@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,19 +22,20 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LogInPageActivity extends AppCompatActivity {
-    TextView sigup, login, forgot;
+    TextView sigup, login;
+     Button forgot;
     TextInputEditText email, password;
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in_page);
+        setContentView(R.layout.login_page_activity);
         sigup = findViewById(R.id.singup);
         email = findViewById(R.id.email);
         login = findViewById(R.id.login);
         password = findViewById(R.id.password);
-        forgot = findViewById(R.id.forgot);
+        forgot = findViewById(R.id.btnForgetPassword);
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Verifying data....");
