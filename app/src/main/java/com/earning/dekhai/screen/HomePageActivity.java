@@ -1,20 +1,19 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.earning.dekhai.screen.NoticeActivity;
-import com.earning.dekhai.screen.ProfileData;
-import com.earning.dekhai.screen.SplashScreen;
+import com.earning.dekhai.R;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -26,6 +25,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.earning.dekhai.databinding.ActivityHomePageBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.squareup.picasso.Picasso;
+
+import java.util.Map;
 
 public class HomePageActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 //    initializing variable
@@ -36,7 +43,8 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
     private ActivityHomePageBinding binding;
     private FirebaseAuth mAuth;
 
-
+    ImageView image7;
+    private DocumentReference currentUserDb;
 
     private Menu menu;
     private MenuItem nav_home,nav_membership,nav_earn_cash,nav_wallet,nav_order_list,nav_payment_history,nav_youtube,nav_support_group,nav_logout;
@@ -59,6 +67,10 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
         how_to_earn=findViewById(R.id.how_to_earn);
         essential_links=findViewById(R.id.essential_links);
         shopping=findViewById(R.id.shopping);
+        image7 = findViewById(R.id.image7);
+
+        getImage();
+
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -305,6 +317,25 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
                 || super.onSupportNavigateUp();
     }
 
-
+    private void getImage() {
+        mAuth = FirebaseAuth.getInstance();
+        currentUserDb = FirebaseFirestore.getInstance().collection("image").document("display");
+        currentUserDb.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(error !=null){
+                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (value.exists()) {
+                    Map<String, Object> map = (Map<String, Object>) value.getData();
+                    if (map.get("image") != null) {
+                        String aboutForDisplay = map.get("image").toString();
+                        Picasso.get().load(aboutForDisplay).into(image7);
+                    }
+                }
+            }
+        });
+    }
 }
 

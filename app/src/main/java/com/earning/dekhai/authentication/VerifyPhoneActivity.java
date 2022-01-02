@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.earning.dekhai.screen.ProfileData;
 import com.google.android.gms.tasks.OnCompleteListener;

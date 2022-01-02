@@ -6,14 +6,9 @@ import androidx.constraintlayout.motion.widget.MotionLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 
-import com.earning.dekhai.HomePageActivity;
-import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.earning.dekhai.authentication.LogInPageActivity;
-import com.earning.dekhai.authentication.PhoneNumber;
-import com.earning.dekhai.authentication.VerifyPhoneActivity;
 import com.earning.dekhai.utils.Tools;
 import com.google.firebase.auth.FirebaseAuth;
 

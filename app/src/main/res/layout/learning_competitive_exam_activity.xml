@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LearningCompetitiveExam"
+    tools:context=".screen.LearningCompetitiveExam"
     android:background="@color/materialBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout

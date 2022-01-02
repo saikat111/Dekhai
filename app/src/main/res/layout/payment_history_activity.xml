@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment_history"
+    tools:context=".screen.payment_history"
     android:background="@color/materialBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShoppingPage"
+    tools:context=".screen.ShoppingPage"
     android:background="@color/materialBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -99,7 +99,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight=".25"
-                    android:background="@drawable/new_background"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp">
@@ -111,6 +110,9 @@
                         android:layout_height="wrap_content"
                         tools:ignore="MissingConstraints" />
 
+
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -118,7 +120,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight=".75"
-                    android:background="@drawable/new_background"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp">

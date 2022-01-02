@@ -1,14 +1,16 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LearningCompetitiveExam extends AppCompatActivity {
+import com.earning.dekhai.R;
+
+public class view_wallet_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.learning_competitive_exam_activity);
+        setContentView(R.layout.view_wallet_page_activity);
     }
 }

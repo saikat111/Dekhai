@@ -14,73 +14,73 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
-            android:name=".ShoppingPage"
+            android:name=".screen.ShoppingPage"
             android:exported="true" />
         <activity
-            android:name=".payment_history_cashout"
+            android:name=".screen.payment_history_cashout"
             android:exported="false" />
         <activity
-            android:name=".ProfessionalCourses"
+            android:name=".screen.ProfessionalCourses"
             android:exported="false" />
         <activity
-            android:name=".LearningJobRecruitmentPage"
+            android:name=".screen.LearningJobRecruitmentPage"
             android:exported="false" />
         <activity
-            android:name=".LearningCompetitiveExam"
+            android:name=".screen.LearningCompetitiveExam"
             android:exported="false" />
         <activity
-            android:name=".LearningSkillDevelopmentPage"
+            android:name=".screen.LearningSkillDevelopmentPage"
             android:exported="false" />
         <activity
-            android:name=".LanguageLearningPage"
+            android:name=".screen.LanguageLearningPage"
             android:exported="false" />
         <activity
-            android:name=".LearningPageHome"
+            android:name=".screen.LearningPageHome"
             android:exported="false" />
         <activity
-            android:name=".payment_history"
+            android:name=".screen.payment_history"
             android:exported="true" />
         <activity
-            android:name=".gold_membership_page"
+            android:name=".screen.gold_membership_page"
             android:exported="false" />
         <activity
-            android:name=".silver_membership_page"
+            android:name=".screen.silver_membership_page"
             android:exported="false" />
         <activity
-            android:name=".contact_us"
+            android:name=".screen.contact_us"
             android:exported="true" />
         <activity
-            android:name=".order_list_page"
+            android:name=".screen.order_list_page"
             android:exported="true" />
         <activity
-            android:name=".wallet_to_withdraw"
+            android:name=".screen.wallet_to_withdraw"
             android:exported="true" />
         <activity
-            android:name=".view_wallet_page"
+            android:name=".screen.view_wallet_page"
             android:exported="true" />
         <activity
-            android:name=".earn_cash"
+            android:name=".screen.earn_cash"
             android:exported="true" />
         <activity
-            android:name=".earn_cash_view_page"
+            android:name=".screen.earn_cash_view_page"
             android:exported="true" />
         <activity
-            android:name=".payment_page"
+            android:name=".screen.payment_page"
             android:exported="true" />
         <activity
-            android:name=".free_membership_page"
+            android:name=".screen.free_membership_page"
             android:exported="true" />
         <activity
-            android:name=".membership_page"
+            android:name=".screen.membership_page"
             android:exported="true" />
         <activity
-            android:name=".profile_page"
+            android:name=".screen.profile_page"
             android:exported="true" />
         <activity
             android:name=".authentication.RegistrationPage"
             android:exported="false" />
         <activity
-            android:name=".HomePageActivity"
+            android:name=".screen.HomePageActivity"
             android:exported="false" />
         <activity
             android:name=".authentication.LogInPageActivity"
@@ -125,7 +125,7 @@
             android:name=".authentication.PhoneNumber"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".screen.MainActivity"
             android:exported="false" />
 
         <meta-data

@@ -1,8 +1,10 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.earning.dekhai.R;
 
 public class contact_us extends AppCompatActivity {
 

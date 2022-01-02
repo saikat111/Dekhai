@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment_history_cashout"
+    tools:context=".screen.payment_history_cashout"
     android:stretchColumns="1,2,3,4,5"
     android:background="@color/materialBackground">
 

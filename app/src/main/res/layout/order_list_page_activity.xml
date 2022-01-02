@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".order_list_page"
+    tools:context=".screen.order_list_page"
     android:stretchColumns="1,2,3,4,5"
     android:background="@color/materialBackground">
 

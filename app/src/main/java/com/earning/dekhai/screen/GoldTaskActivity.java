@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;

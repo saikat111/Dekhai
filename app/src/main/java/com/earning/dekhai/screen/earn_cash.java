@@ -1,15 +1,14 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.earning.dekhai.screen.NoticeActivity;
+import com.earning.dekhai.R;
 
 public class earn_cash extends AppCompatActivity {
     Button btnWatchVideo ,btnSurvey ,btnAppInstall ,btnPromotionalLinkShare,btnAffiliateMarketing;

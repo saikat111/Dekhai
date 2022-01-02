@@ -1,4 +1,4 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -6,6 +6,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.earning.dekhai.R;
 
 public class LearningJobRecruitmentPage extends AppCompatActivity {
     ConstraintLayout j;

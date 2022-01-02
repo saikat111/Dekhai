@@ -1,4 +1,4 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 
+import com.earning.dekhai.R;
 import com.earning.dekhai.adapter.payment_history_cashout_adapter;
 import com.earning.dekhai.model.order_list_model;
 import com.earning.dekhai.model.payment_history_cashout_model;

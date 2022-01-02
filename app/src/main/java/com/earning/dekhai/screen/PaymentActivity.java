@@ -15,9 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
-import com.earning.dekhai.authentication.PhoneNumber;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;

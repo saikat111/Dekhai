@@ -1,4 +1,4 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.earning.dekhai.R;
 
 public class LearningPageHome extends AppCompatActivity {
     Button btnLanguageLearning , btnSkillDevelopment,btnProfessionalCorses,btnJobRecruitmentCourses,btnCompetitiveExam;

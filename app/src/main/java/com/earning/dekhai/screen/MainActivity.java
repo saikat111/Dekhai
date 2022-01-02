@@ -1,4 +1,4 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -6,29 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.earning.dekhai.authentication.PhoneNumber;
-import com.earning.dekhai.screen.FreeTaskActivity;
-import com.earning.dekhai.screen.GoldTaskActivity;
-import com.earning.dekhai.screen.MembarShipActivity;
-import com.earning.dekhai.screen.NoticeActivity;
-import com.earning.dekhai.screen.PremiumTaskActivity;
-import com.earning.dekhai.screen.ProfileData;
-import com.earning.dekhai.screen.SplashScreen;
-import com.earning.dekhai.screen.Wallet;
+import com.earning.dekhai.R;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
 import com.facebook.ads.AudienceNetworkAds;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -36,7 +24,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -48,9 +35,6 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 

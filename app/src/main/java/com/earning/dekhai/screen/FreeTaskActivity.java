@@ -3,7 +3,6 @@ package com.earning.dekhai.screen;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.earning.dekhai.MainActivity;
 import com.earning.dekhai.R;
-import com.earning.dekhai.authentication.PhoneNumber;
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AudienceNetworkAds;

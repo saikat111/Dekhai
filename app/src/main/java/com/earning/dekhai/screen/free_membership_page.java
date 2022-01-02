@@ -1,4 +1,4 @@
-package com.earning.dekhai;
+package com.earning.dekhai.screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.earning.dekhai.screen.SplashScreen;
+import com.earning.dekhai.R;
 
 public class free_membership_page extends AppCompatActivity {
     Button work;
