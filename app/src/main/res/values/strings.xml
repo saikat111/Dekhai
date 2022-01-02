@@ -51,6 +51,11 @@
     <string name="presentation_public_speaking"><![CDATA[PRESENTATION & PUBLIC SPEAKING]]></string>
     <string name="communication_negotiation"><![CDATA[COMMUNICATION & NEGOTIATION]]></string>
     <string name="the_biggest_online_platform_for_learning_raening_shopping"><![CDATA[The Biggest Online Platform For Learning, Raening & Shopping]]></string>
+    <string name="health_beauty"><![CDATA[HEALTH & BEAUTY]]></string>
+    <string name="daily_bazar">DAILY BAZAR</string>
+    <string name="home_appliances">HOME APPLIANCES</string>
+    <string name="smart_phone">SMART PHONE</string>
+    <string name="todays_special">TODAYS SPECIAL</string>
 
 
 </resources>

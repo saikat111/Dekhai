@@ -104,13 +104,70 @@
                     android:layout_marginBottom="10dp">
 
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/shooping_category"
+                    <Button
+                        android:id="@+id/ib_todays_special"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:ignore="MissingConstraints" />
+                        android:drawableTop="@drawable/dailyoffer"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="@string/todays_special"/>
 
+                    <Button
+                        android:id="@+id/ib_smart_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/smartphone"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ib_todays_special"
+                        android:text="@string/smart_phone"/>
 
+                    <Button
+                        android:id="@+id/ib_home_appliances"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/homeappliances"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ib_smart_phone"
+                        android:text="@string/home_appliances"/>
+
+                    <Button
+                        android:id="@+id/ib_daily_bazar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/dailybazar"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ib_home_appliances"
+                        android:text="@string/daily_bazar"/>
+
+                    <Button
+                        android:id="@+id/ib_health_beauty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/healthbeauty"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ib_daily_bazar"
+                        android:text="@string/health_beauty"/>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
