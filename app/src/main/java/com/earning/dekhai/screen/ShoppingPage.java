@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.earning.dekhai.R;
 import com.earning.dekhai.adapter.CategoryAdapter;
@@ -26,14 +28,14 @@ import com.smarteist.autoimageslider.SliderView;
 
 public class ShoppingPage extends AppCompatActivity {
 
-    RecyclerView shooping_category,shooping_products;
-    CategoryAdapter  ca;
+    RecyclerView shooping_products;
     ProductAdapter productAdapter;
+    Button ib_todays_special,ib_smart_phone,ib_home_appliances,ib_daily_bazar,ib_health_beauty;
 
     SliderView sliderView;
-    int[] images = {R.drawable.banner_img,
-            R.drawable.banner_img,
-            R.drawable.banner_img};
+    int[] images = {R.drawable.a,
+            R.drawable.b,
+            R.drawable.c};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,47 +44,120 @@ public class ShoppingPage extends AppCompatActivity {
 
         sliderView = findViewById(R.id.shopping_image_slider);
 
+        ib_todays_special = findViewById(R.id.ib_todays_special);
+        ib_smart_phone = findViewById(R.id.ib_smart_phone);
+        ib_home_appliances = findViewById(R.id.ib_home_appliances);
+        ib_daily_bazar = findViewById(R.id.ib_daily_bazar);
+        ib_health_beauty = findViewById(R.id.ib_health_beauty);
+
         SliderAdapter sliderAdapter = new SliderAdapter(images);
 
         sliderView.setSliderAdapter(sliderAdapter);
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
-
-
-        shooping_category=findViewById(R.id.shooping_category);
         shooping_products=findViewById(R.id.shooping_products);
-
-
-
-
-        FirebaseFirestore find = FirebaseFirestore.getInstance();
-        CollectionReference collection = find.collection("membership");
-        Query query = collection.orderBy("order");
-        shooping_category.setLayoutManager(new LinearLayoutManager(this));
-        FirestoreRecyclerOptions<CategoryModel> options7 =
-                new FirestoreRecyclerOptions.Builder<CategoryModel>()
-                        .setQuery(query, CategoryModel.class)
-                        .build();
-        ca = new CategoryAdapter(options7);
-        shooping_category.setAdapter(ca);
 
         FirebaseFirestore find1 = FirebaseFirestore.getInstance();
         CollectionReference collection1 = find1.collection("product");
+        Query query = collection1.whereEqualTo("category", "todays_special");
         shooping_products.setLayoutManager(new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false));
         FirestoreRecyclerOptions<ProductModel> options71 =
                 new FirestoreRecyclerOptions.Builder<ProductModel>()
-                        .setQuery(collection1, ProductModel.class)
+                        .setQuery(query, ProductModel.class)
                         .build();
         productAdapter = new ProductAdapter(options71);
         shooping_products.setAdapter(productAdapter);
+
+        ib_todays_special.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CollectionReference collection1 = find1.collection("product");
+                Query query = collection1.whereEqualTo("category", "todays_special");
+                shooping_products.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2, GridLayoutManager.VERTICAL, false));
+                FirestoreRecyclerOptions<ProductModel> options71 =
+                        new FirestoreRecyclerOptions.Builder<ProductModel>()
+                                .setQuery(query, ProductModel.class)
+                                .build();
+                productAdapter = new ProductAdapter(options71);
+                shooping_products.setAdapter(productAdapter);
+                productAdapter.startListening();
+            }
+        });
+        ib_smart_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CollectionReference collection1 = find1.collection("product");
+                Query query = collection1.whereEqualTo("category", "gadget_smart_phone");
+                shooping_products.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2, GridLayoutManager.VERTICAL, false));
+                FirestoreRecyclerOptions<ProductModel> options71 =
+                        new FirestoreRecyclerOptions.Builder<ProductModel>()
+                                .setQuery(query, ProductModel.class)
+                                .build();
+                productAdapter = new ProductAdapter(options71);
+                shooping_products.setAdapter(productAdapter);
+                productAdapter.startListening();
+            }
+        });
+        ib_home_appliances.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CollectionReference collection1 = find1.collection("product");
+                Query query = collection1.whereEqualTo("category", "electronics_home_appliances");
+                shooping_products.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2, GridLayoutManager.VERTICAL, false));
+                FirestoreRecyclerOptions<ProductModel> options71 =
+                        new FirestoreRecyclerOptions.Builder<ProductModel>()
+                                .setQuery(query, ProductModel.class)
+                                .build();
+                productAdapter = new ProductAdapter(options71);
+                shooping_products.setAdapter(productAdapter);
+                productAdapter.startListening();
+
+            }
+        });
+        ib_daily_bazar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CollectionReference collection1 = find1.collection("product");
+                Query query = collection1.whereEqualTo("category", "daily_bazar");
+                shooping_products.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2, GridLayoutManager.VERTICAL, false));
+                FirestoreRecyclerOptions<ProductModel> options71 =
+                        new FirestoreRecyclerOptions.Builder<ProductModel>()
+                                .setQuery(query, ProductModel.class)
+                                .build();
+                productAdapter = new ProductAdapter(options71);
+                shooping_products.setAdapter(productAdapter);
+                productAdapter.startListening();
+            }
+        });
+        ib_health_beauty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CollectionReference collection1 = find1.collection("product");
+                Query query = collection1.whereEqualTo("category", "fashion_health_beauty");
+                shooping_products.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2, GridLayoutManager.VERTICAL, false));
+                FirestoreRecyclerOptions<ProductModel> options71 =
+                        new FirestoreRecyclerOptions.Builder<ProductModel>()
+                                .setQuery(query, ProductModel.class)
+                                .build();
+                productAdapter = new ProductAdapter(options71);
+                shooping_products.setAdapter(productAdapter);
+                productAdapter.startListening();
+            }
+        });
+
+
+
+
+
+
+
 
 
     }
     @Override
     protected void onStart() {
         super.onStart();
-        ca.startListening();
         productAdapter.startListening();
 
 
@@ -91,7 +166,6 @@ public class ShoppingPage extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        ca.stopListening();
         productAdapter.stopListening();
     }
 }
