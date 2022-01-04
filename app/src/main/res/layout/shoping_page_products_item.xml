@@ -83,6 +83,13 @@
             android:visibility="gone"
             >
         </TextView>
+        <TextView
+            android:id="@+id/d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+        </TextView>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

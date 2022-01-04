@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dekhai">
         <activity
+            android:name=".screen.ProductPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".screen.ShoppingPage"
             android:exported="true" />
         <activity

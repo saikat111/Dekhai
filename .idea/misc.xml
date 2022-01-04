@@ -3,10 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/buttondesign.xml" value="0.26614583333333336" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/drawable/ctbutton_bg.xml" value="0.26614583333333336" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/shoping_page_category_item.xml" value="0.14492753623188406" />
-        <entry key="..\:/Dekhai/Dekhai/app/src/main/res/layout/shopping_page_activity.xml" value="0.14492753623188406" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/background_update.xml" value="0.25052083333333336" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/gradient.xml" value="0.22760416666666666" />
         <entry key="..\:/dekhai/app/src/main/res/drawable/ic_baseline_speaker_notes_24.xml" value="0.2546875" />
@@ -21,6 +17,8 @@
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_payment.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_phone_number.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_premium_task.xml" value="0.20625" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_product_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/activity_product_payment.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_profile.xml" value="0.23072916666666668" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_profile_data.xml" value="0.2" />
         <entry key="..\:/dekhai/app/src/main/res/layout/activity_registration_page.xml" value="0.264" />

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Dekhai</string>
     <string name="fb">https://www.facebook.com/groups/1166929073679754</string>
     <string name="youtube">https://www.youtube.com/channel/UC7sS1rBaAMypmr6nBCixIAQ?view_as=subscriber</string>
@@ -58,4 +58,21 @@
     <string name="todays_special">TODAYS SPECIAL</string>
 
 
+
+    <string name="sendmoney">আমাদের বিকাশ নম্বরটি</string>
+    <string name="bikash">01755111413(personal)</string>
+    <string name="sendtext">নম্বরটিতে আপনার অর্থ প্রেরণ করুন</string>
+    <string name="details">টাকা পাঠানোর পরে নীচের লিখিত নিয়মগুলি অনুসরণ করুন:</string>
+    <string name="order">আপনার বিকাশ নম্বরটি লিখুন যা থেকে আপনি আমাদের টাকা পাঠিয়েছেন :</string>
+    <string name="finalorder">যদি প্রতিটি জিনিস ঠিক থাকে তবে অর্ডার বোতামটি টিপুন</string>
+    <string name="finalword">আমরা আপনাকে এসএমএসের মাধ্যমে সমস্ত বিবরণ পাঠাব</string>
+    <string name="call">যদি আপনি কিছু জানতে চান এই নম্বরে কল করুন</string>
+    <string name="address">আপনার ঠিকানা লিখুন:</string>
+    <string name="roket">আমাদের রকেট নম্বরটি</string>
+    <string name="contactnumber">আপনার ব্যক্তিগত ফোন নম্বরটি লিখুন</string>
+    <string name="ad_attribution">Ad</string>
+
+    <string name="tkk" tools:ignore="DuplicateDefinition">অর্ডার সাব্মিট করার ১৫ মিনিটস এর ভিতর এই নম্বরটিতে আপনার অর্থ প্রেরণ করুন</string>
+
+    <string name="pattran">-------------------</string>
 </resources>

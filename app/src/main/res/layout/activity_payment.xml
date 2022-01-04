@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:background="#eceff1"
     android:gravity="center">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,68 +17,69 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="25dp"
-            app:cardElevation="3dp"
-            app:cardCornerRadius="10dp"
             android:layout_gravity="center"
-            app:cardBackgroundColor="@color/white">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="15dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp">
 
-                    <androidx.cardview.widget.CardView
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/banner_img" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="3dp">
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OPEN YOUR BKASH APP"
+                            android:textSize="13sp" />
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:src="@drawable/banner_img"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="3dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_weight="0.5"
+                            android:src="@drawable/ic_arrow_forward" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="OPEN YOUR BKASH APP"
-                                android:textSize="13sp"/>
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.5"
-                                android:src="@drawable/ic_arrow_forward"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="GO TO PAYMENT"
+                            android:textSize="13sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="GO TO PAYMENT"
-                                android:textSize="13sp"/>
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.5"
-                                android:src="@drawable/ic_arrow_forward"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:src="@drawable/ic_arrow_forward" />
 
                     </LinearLayout>
 
@@ -90,72 +92,76 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="TYPE "
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
+
                         <TextView
                             android:id="@+id/n"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
-                            android:src="@drawable/ic_arrow_forward"/>
+                            android:src="@drawable/ic_arrow_forward" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:text="AMOUNT"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
-                            android:src="@drawable/ic_arrow_forward"/>
+                            android:src="@drawable/ic_arrow_forward" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:text="SEND"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:textSize="20sp"
-                    android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/alike"
-                    android:textColor="#000"
                     android:text="নিচের দেওয়া নম্বর এ  টাকা সেন্ট করতে হবে "
-                    android:visibility="gone"/>
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/numberb"
-                    android:textSize="20sp"
-                    android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/alike"
-                    android:textColor="#000"/>
+                    android:textColor="#000"
+                    android:textSize="20sp" />
 
                 <RadioGroup
+                    android:id="@+id/radioGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:id="@+id/radioGroup"
-                    android:orientation="horizontal"
                     android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="3dp">
 
@@ -163,28 +169,29 @@
                         android:id="@+id/bkash"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/bkash"
                         android:checked="false"
+                        android:text="@string/bkash"
                         android:textSize="20sp" />
+
                     <RadioButton
                         android:id="@+id/nogod"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/nogod"
                         android:checked="false"
+                        android:text="@string/nogod"
                         android:textSize="20sp" />
 
                 </RadioGroup>
 
                 <TextView
 
-                    android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/alike"
+                    android:text="@string/enter_your_bkash_nogod_number"
                     android:textColor="#000"
-                    android:text="@string/enter_your_bkash_nogod_number"/>
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/number"
@@ -195,14 +202,15 @@
                     android:hint="@string/number"
                     android:textColor="#000"
                     android:textColorHint="@color/accent" />
+
                 <TextView
-                    android:textSize="20sp"
-                    android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/alike"
+                    android:text="@string/enter_transaction_id"
                     android:textColor="#000"
-                    android:text="@string/enter_transaction_id"/>
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/transactionid"
@@ -215,13 +223,13 @@
                     android:textColorHint="#4ABDFF" />
 
                 <TextView
-                    android:textSize="20sp"
-                    android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/alike"
+                    android:text="@string/enter_amount"
                     android:textColor="#000"
-                    android:text="@string/enter_amount"/>
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/amount"
@@ -233,7 +241,7 @@
                     android:textColor="#000"
                     android:textColorHint="#4ABDFF" />
 
-               <!-- <TextView
+                <!-- <TextView
                     android:textSize="20sp"
                     android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
@@ -253,11 +261,11 @@
                     android:textColorHint="#4ABDFF" />-->
 
                 <Button
+                    android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/submit"
-                    android:id="@+id/submit"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/submit" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </ScrollView>
