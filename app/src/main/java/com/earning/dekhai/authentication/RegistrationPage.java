@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.earning.dekhai.R;
@@ -49,30 +51,56 @@ public class RegistrationPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressDialog.show();
-            /*    if(email.getText().toString() == null){
-                    Toast.makeText(getApplicationContext(), "Fill email box", Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(email.getText().toString()))
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),
+                            "Fill email box",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(phone.getText().toString().equals(null)){
-                    Toast.makeText(getApplicationContext(), "Fill  phone box", Toast.LENGTH_LONG).show();
+
+                if (TextUtils.isEmpty(phone.getText().toString()))
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),
+                            "Fill  phone box",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(address.getText().toString().equals(null)){
-                    Toast.makeText(getApplicationContext(), "Fill address box", Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(address.getText().toString()))
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),
+                            "Fill address box",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(zip.getText().toString().equals(null)){
-                    Toast.makeText(getApplicationContext(), "Fill zip box", Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(zip.getText().toString()))
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),
+                            "Fill zip box",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(password.getText().toString().equals(null)){
-                    Toast.makeText(getApplicationContext(), "Fill  password box", Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(password.getText().toString()))
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),
+                            "Fill password box",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(name.getText().toString().equals(null)){
-                    Toast.makeText(getApplicationContext(), "Fill  name box", Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(name.getText().toString()))
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(),
+                            "Fill name box",
+                            Toast.LENGTH_SHORT).show();
                     return;
-                }*/
+                }
+
                 String tempEmail = email.getText().toString();
                 String tempPassword = password.getText().toString();
                 mAuth.createUserWithEmailAndPassword(tempEmail,tempPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -143,4 +171,5 @@ public class RegistrationPage extends AppCompatActivity {
         });
 
     }
+
 }
