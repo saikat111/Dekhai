@@ -267,7 +267,15 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
             startActivity(intentMembership);
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
-        }else if(id == R.id.nav_earn_cash){
+        }
+        else if(id == R.id.nav_home){
+
+            Intent intentearncash = new Intent(this, profile_page.class);
+            startActivity(intentearncash);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+        }
+        else if(id == R.id.nav_earn_cash){
 
             Intent intentearncash = new Intent(this, earn_cash.class);
             startActivity(intentearncash);

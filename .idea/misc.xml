@@ -38,6 +38,7 @@
         <entry key="..\:/dekhai/app/src/main/res/layout/fragment_home2.xml" value="0.25416666666666665" />
         <entry key="..\:/dekhai/app/src/main/res/layout/fragment_info.xml" value="0.25416666666666665" />
         <entry key="..\:/dekhai/app/src/main/res/layout/fragment_notification.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/layout/fragment_slideshow.xml" value="0.23854166666666668" />
         <entry key="..\:/dekhai/app/src/main/res/layout/free_membership_page_activity.xml" value="0.234375" />
         <entry key="..\:/dekhai/app/src/main/res/layout/language_learning_page_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/dekhai/app/src/main/res/layout/learning_competitive_exam_activity.xml" value="0.25416666666666665" />
@@ -58,8 +59,10 @@
         <entry key="..\:/dekhai/app/src/main/res/layout/shoping_page_products_item.xml" value="0.264" />
         <entry key="..\:/dekhai/app/src/main/res/layout/shopping_page_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/dekhai/app/src/main/res/layout/wallet_to_withdraw_activity.xml" value="0.25" />
+        <entry key="..\:/dekhai/app/src/main/res/menu/activity_home_page_drawer.xml" value="0.23854166666666668" />
         <entry key="..\:/dekhai/app/src/main/res/menu/home_page_menu.xml" value="0.2359375" />
         <entry key="..\:/dekhai/app/src/main/res/menu/top_bar.xml" value="0.25416666666666665" />
+        <entry key="..\:/dekhai/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21666666666666667" />
       </map>
     </option>
   </component>

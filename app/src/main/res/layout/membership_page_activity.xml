@@ -146,7 +146,7 @@
                             android:gravity="center"
                             android:text="Name"
                             android:textColor="@color/black"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -229,6 +229,7 @@
                 android:background="@color/materialBackground">
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/btnProfile"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"

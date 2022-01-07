@@ -50,8 +50,8 @@
 
                     <ImageView
                         android:id="@+id/image1"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -62,12 +62,13 @@
                         android:id="@+id/textView1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Learning"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image1" />
@@ -87,8 +88,8 @@
 
                     <ImageView
                         android:id="@+id/image2"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -99,12 +100,13 @@
                         android:id="@+id/textView2"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Earning"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image2" />
@@ -124,8 +126,8 @@
 
                     <ImageView
                         android:id="@+id/image3"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -136,12 +138,13 @@
                         android:id="@+id/textView3"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Shopping"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image3" />
@@ -161,8 +164,8 @@
 
                     <ImageView
                         android:id="@+id/image4"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -173,12 +176,13 @@
                         android:id="@+id/textView4"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Notice"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image4" />
@@ -199,8 +203,8 @@
 
                     <ImageView
                         android:id="@+id/image5"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -211,12 +215,13 @@
                         android:id="@+id/textView5"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
-                        android:text="How to earn"
+                        android:text="How to Earn"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image5" />
@@ -236,8 +241,8 @@
 
                     <ImageView
                         android:id="@+id/image6"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -248,12 +253,13 @@
                         android:id="@+id/textView6"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Essential Links"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image6" />
@@ -302,7 +308,7 @@
                     <ImageView
                         android:id="@+id/image7"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="120dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -352,8 +358,8 @@
 
                     <ImageView
                         android:id="@+id/image8"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -364,12 +370,13 @@
                         android:id="@+id/textView8"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Campaign"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image8" />
@@ -389,8 +396,8 @@
 
                     <ImageView
                         android:id="@+id/image9"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -401,12 +408,13 @@
                         android:id="@+id/textView9"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="YouTube"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image9" />
@@ -426,8 +434,8 @@
 
                     <ImageView
                         android:id="@+id/image10"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -438,12 +446,13 @@
                         android:id="@+id/textView10"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
                         android:layout_marginBottom="2dp"
                         android:gravity="center"
                         android:text="Contact Us"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image10" />
